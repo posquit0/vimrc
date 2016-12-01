@@ -19,18 +19,10 @@ endif
 
 """ Plugin Configuration
 " All the vim plugins are managed by 'vim-plug'
-" List & configuration of plugins separated to two file 'plugins.vim',
-" 'plugins.after.vim'.
-" It makes this vimrc could also work out-of-box even if not managed by
-" dotfiles.
+" List & configuration of plugins separated to several files 'plugins.*.vim'
 if filereadable(expand('$VIM_HOME/plugins.vim'))
   source $VIM_HOME/plugins.vim
 endif
-
-""" Plugin Configuration after loading plug
-"if filereadable(expand('$VIM_HOME/plugins.after.vim'))
-"  source $VIM_HOME/plugins.after.vim
-"endif
 
 """ Override Configuration (because of plugins.vim)
 "if filereadable(expand('$VIM_HOME/override.vim'))
@@ -38,11 +30,11 @@ endif
 "endif
 
 """ GUI Specific Configuration
-"if has('gui_running')
-"  if filereadable(expand('$VIM_HOME/gvim.vim'))
-"    source $VIM_HOME/gvim.vim
-"  endif
-"endif
+if has('gui_running')
+ if filereadable(expand('$VIM_HOME/gui.vim'))
+   source $VIM_HOME/gui.vim
+ endif
+endif
 
 
 """ Theme Configuration
