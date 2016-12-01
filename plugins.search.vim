@@ -4,6 +4,42 @@
 " http://www.posquit0.com/
 
 
+"" Plugin: CtrlP {{{
+  " Full path fuzzy file, buffer, mru, tag finder for Vim
+  Plug 'kien/ctrlp.vim'
+  let g:ctrlp_map='<c-p>'
+  let g:ctrlp_cmd='CtrlP'
+"" }}}
+
+"" Plugin: Easymotion {{{
+  " Provides a much simpler way to use motions in Vim
+  Plug 'Lokaltog/vim-easymotion'
+"" }}}
+
+"" Plugin: Vim Signature {{{
+  " To place, toggle, display and navigate marks
+  " Keymap:
+  " mx        Toggle mark 'x' where x is a-zA-Z
+  " dmx       Remove mark 'x' where x is a-zA-Z
+  " m,        Place the next available mark
+  " m.        If no mark on line, place the next available mark
+  " m-        Delete all marks from the current line
+  " m/        Open location list and display marks
+  " m<Space>  Delete all marks from the current buffer
+  " m[0-9]    Toggle the corresponding marker !@#$%^&*()
+  " m<S-[0-9]>Remove all markers of the same type
+  " m?        Open location list and display markers
+  " m<BS>     Remove all markers
+  " ]`        Jump to next mark
+  " [`        Jump to prev mark
+  " ]'        Jump to start of next line containg a mark
+  " ['        Jump to start of prev line containg a mark
+  Plug 'kshenoy/vim-signature'
+  " Highlight signs of marks dynamically based upon state
+  " indicated by vim-signify
+  let g:SignatureMarkTextHLDynamic=1
+"" }}}
+
 "" Plugin: Tagbar {{{
   " Easy way to browse the tags
   Plug 'majutsushi/tagbar'

@@ -44,6 +44,13 @@ endif
 "  endif
 "endif
 
+
+""" Theme Configuration
+if filereadable(expand('$VIM_HOME/theme.vim'))
+  source $VIM_HOME/theme.vim
+endif
+
+
 """ Local Specific Configuration
 " Use local vimrc if available
 if filereadable(expand('$HOME/.vimrc.local'))
