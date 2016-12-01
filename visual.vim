@@ -29,7 +29,7 @@ if exists('+colorcolumn')
   set colorcolumn=80
   highlight ColorColumn ctermbg=gray
 endif
-" Highlight current line 
+" Highlight current line
 set cursorline
 " Show cursorline for active window only
 augroup highlight_active_window
@@ -66,23 +66,5 @@ endif
   " be sensitive when there's a capital letter
   set smartcase
   " Highlight dynamically as pattern is typed
-  set incsearch 
-""" }}}
-
-""" Theme {{{
-  " Enable 256 colors in vim
-  set t_Co=256
-  " Disable Background Color Erase (BCE) so that color schemes
-  " work properly when Vim is used inside tmux and GNU screen
-  if &term =~ '256color'
-    set t_ut=
-  endif
-  " Set to 'dark' to use colors that look good on dark background
-  " Set to 'light' to use colors that look good on a light background
-  " set background=dark
-  " Set colorscheme
-  " colorscheme summerfruit256
-  " colorscheme gruvbox
-  " colorscheme seoul256-light
-  " colorscheme molokai
+  set incsearch
 """ }}}

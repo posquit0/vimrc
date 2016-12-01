@@ -24,7 +24,7 @@ nnoremap ; :
 inoremap jkj <Esc>
 " Screen sucks, redraw everything
 nnoremap <Leader>r :redraw!<CR>
-" Make Q meaningless (Q: Entering to Ex mode) 
+" Make Q meaningless (Q: Entering to Ex mode)
 nnoremap Q <nop>
 " Switching search-highlighting off until next search
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
