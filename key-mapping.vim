@@ -30,8 +30,8 @@ nnoremap Q <nop>
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 " Quickly move current line above or below
-nnoremap <C-k><C-k> :<c-u>execute 'move -1-'. v:count1<cr>
-nnoremap <C-j><C-j> :<c-u>execute 'move +'. v:count1<cr>
+nnoremap <C-k><C-k> :<C-u>execute 'move -1-'. v:count1<CR>
+nnoremap <C-j><C-j> :<C-u>execute 'move +'. v:count1<CR>
 
 """ Hex Editor {{{
   " Map HexEditToggle to <F9>

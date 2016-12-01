@@ -44,3 +44,8 @@
   " Rendering diff automatically with cursor move
   let g:gundo_auto_preview=1
 "" }}}
+
+"" Plugin: Github Dashboard {{{
+  " Browse github events in Vim
+  Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
+"" }}}

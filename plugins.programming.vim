@@ -40,6 +40,18 @@
   let g:syntastic_sh_checkers=['shellcheck']
 "" }}}
 
+"" Plugin: UltiSnips {{{
+  " Snippet engine for Vim
+  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+  " Configure keys trigerring UltiSnips
+  let g:UltiSnipsExpandTrigger='<Tab>'
+  let g:UltiSnipsJumpForwardTrigger='<Tab>'
+  let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
+  let g:UltiSnipsListSnippets='<Tab>l'
+  " If you want :UltiSnipsEdit to split your window.
+  let g:UltiSnipsEditSplit='vertical'
+"" }}}
+
 "" Plugin: NERD Commenter {{{
   " For intensely orgasmic commenting
   Plug 'scrooloose/nerdcommenter'
@@ -49,4 +61,37 @@
   let g:NERDSpaceDelims=1
   " Remove spaces around comment delimiters
   let g:NERDRemoveExtraSpaces=1
+"" }}}
+
+" Markdown
+"" Plugin: Goyo {{{
+  " Distraction-free writing
+  Plug 'junegunn/goyo.vim'
+"" }}}
+
+"" Plugin: Limelight {{{
+  " Hyperfocus-writing in Vim
+  Plug 'junegunn/limelight.vim'
+  " Set coefficient value
+  let g:limelight_default_coefficient=0.7
+  " Configure the number of preceding/following paragraphs to include
+  let g:limelight_paragraph_span=1
+  " Set shortcut to toggle limelight
+  nnoremap <Leader>l :Limelight!!<CR>
+  xnoremap <Leader>l :Limelight!!<CR>
+  " Integrate with Goyo
+  autocmd! User GoyoEnter Limelight
+  autocmd! User GoyoLeave Limelight!
+"" }}}
+
+"" Plugin: Vim Instant Markdown {{{
+  " Instant markdown Previews from Vim
+  Plug 'suan/vim-instant-markdown'
+  " Only refresh on specific events
+  let g:instant_markdown_slow=1
+  " Manually control to launch the preview window
+  " Command(:InstantMarkdownPreview)
+  let g:instant_markdown_autostart=1
+  " Allow external content like images
+  let g:instant_markdown_allow_external_content=1
 "" }}}
