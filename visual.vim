@@ -9,7 +9,8 @@ syntax on
 
 " Line numbers on
 set number
-" Enable relative number for line(Constantly computing the relative nubmers is expensive)
+" Enable relative number for line
+" (Constantly computing the relative nubmers is expensive)
 set relativenumber
 " Show ruler
 set ruler
