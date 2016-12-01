@@ -24,6 +24,9 @@
   let g:syntastic_auto_loc_list=1
   let g:syntastic_check_on_open=1
   let g:syntastic_check_on_wq=0
+  " Symbols
+  let g:syntastic_error_symbol='✘'
+  let g:syntastic_warning_symbol='▲'
   " For C / C++
   let g:syntastic_cpp_compiler='clang++'
   let g:syntastic_cpp_compiler_options=' -std=c++11'

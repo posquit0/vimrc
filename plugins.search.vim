@@ -49,9 +49,7 @@
 
 "" Plugin: NERDTree {{{
   " Explore filesystem with Vim
-  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-  " Map NERDTreeToggle to <F11>
-  nnoremap <silent> <F11> :NERDTreeToggle<CR>
+  Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
   " Ignore some extensions
   let NERDTreeIgnore=['.o$','.pyc$']
   " Show hidden files
@@ -79,4 +77,11 @@
   \ 'Clean'     : '✔︎',
   \ 'Unknown'   : '?'
   \ }
+"" }}}
+
+"" Plugin: NERDTree Tabs {{{
+  " NERDTree and tabs together in Vim
+  Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
+  " Map NERDTreeToggle to <F11>
+  nnoremap <silent> <F11> :NERDTreeTabsToggle<CR>
 "" }}}
