@@ -43,6 +43,25 @@
   let g:syntastic_sh_checkers=['shellcheck']
 "" }}}
 
+"" Plugin: Deoplete(NeoVIM only) {{{
+  " Dark powered asynchronous completion framework
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
+    " Javascript source for Neocomplete/Deoplete
+    Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'] }
+    let g:tern#command=["tern"]
+    let g:tern#arguments=["--persistent"]
+  endif
+  " Vim source for Neocomplete/Deoplete
+  Plug 'Shougo/neco-vim', { 'for': ['vim'] }
+  " Insert mode completion of words in adjacent tmux panes
+  Plug 'wellle/tmux-complete.vim'
+  " Use deoplete.
+  let g:deoplete#enable_at_startup=1
+  " When a capital letter is included in input, does not ignore
+  let g:deoplete#enable_smart_case=1
+"" }}}
+
 "" Plugin: UltiSnips {{{
   " Snippet engine for Vim
   Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -64,6 +83,30 @@
   let g:NERDSpaceDelims=1
   " Remove spaces around comment delimiters
   let g:NERDRemoveExtraSpaces=1
+"" }}}
+
+" Javascript & Node
+"" Plugin: Tern for Vim {{{
+  " Tern-based Javascript editing support
+  " Hook into omni completion to handle autocompletion and provide more
+  function! BuildTern(info)
+    " info is a dictionary with 3 fields
+    " - name:   name of the plugin
+    " - status: 'installed', 'updated', or 'unchanged'
+    " - force:  set on PlugInstall! or PlugUpdate!
+    if a:info.status == 'installed' || a:info.force
+      !npm install
+    endif
+  endfunction
+  Plug 'marijnh/tern_for_vim', { 'for': ['javascript'], 'do': function('BuildTern') }
+  " Set timeout
+  let g:tern_request_timeout=1
+  " Display argument type hints when the cursor is left over a function
+  let g:tern_show_argument_hints='on_hold'
+  " Display function signature in the completion menu
+  let g:tern_show_signature_in_pum=0
+  " Disable Shortcuts
+  let g:tern_map_keys=0
 "" }}}
 
 " Markdown
