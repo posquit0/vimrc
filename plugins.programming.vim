@@ -110,6 +110,18 @@
   let g:tern_map_keys=0
 "" }}}
 
+"" Plugin: Vim Node {{{
+  " Tools and environment to make Vim superb for developing with Node.js
+  Plug 'moll/vim-node'
+"" }}}
+
+"" Plugin: Javascript Libraries Syntax {{{
+  " Syntax file for JavaScript libraries
+  Plug 'othree/javascript-libraries-syntax.vim'
+  " Set up used libraries
+  let g:used_javascript_libs='react,jquery,underscore,handlebars'
+"" }}}
+
 " Markdown
 "" Plugin: Goyo {{{
   " Distraction-free writing
