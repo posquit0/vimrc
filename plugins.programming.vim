@@ -87,6 +87,7 @@
 
 " Javascript & Node
 "" Plugin: Tern for Vim {{{
+  " TODO: Key mapping
   " Tern-based Javascript editing support
   " Hook into omni completion to handle autocompletion and provide more
   function! BuildTern(info)
@@ -116,6 +117,7 @@
   " Integrate with other plugins
   function! s:goyo_enter()
     silent !tmux set status off
+    set colorcolumn=
     set noshowmode
     set noshowcmd
     set scrolloff=999
@@ -125,6 +127,7 @@
 
   function! s:goyo_leave()
     silent !tmux set status on
+    set colorcolumn=80
     set showmode
     set showcmd
     set scrolloff=3
