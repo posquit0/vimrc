@@ -15,3 +15,25 @@
   " Usage: :e sudo:/etc/passwd
   Plug 'sudo.vim'
 "" }}}
+
+"" Plugin: Vim QF {{{
+  " Small collection of settings, commands and mappings put together to make
+  " working with the location/quickfix list/window smoother
+  Plug 'romainl/vim-qf'
+  " Enable Ack style mapping only in location/quickfix windows
+  " s - open entry in a new horizontal window
+  " v - open entry in a new vertical window
+  " t - open entry in a new tab
+  " o - open entry and come back
+  " O - open entry and close the location/quickfix window
+  " p - open entry in a preview window
+  let g:qf_mapping_ack_style=1
+  " Open the quickfix window at the bottom of the screen
+  let g:qf_window_bottom=0
+  " Open the location window at the bottom of the screen
+  let g:qf_loclist_window_bottom=0
+  " Open the quickfix window automatically if there are any errors
+  let g:qf_auto_open_quickfix=1
+  " Open the location window automatically if there are any locations
+  let g:qf_auto_open_loclist=1
+"" }}}

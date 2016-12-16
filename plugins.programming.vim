@@ -13,9 +13,60 @@
   let g:javascript_plugin_jsdoc=1
 "" }}}
 
+"" Plugin: NeoMake {{{
+  " Async :make and linting framework for Vim/NeoVim
+  Plug 'neomake/neomake', { 'for': [
+  \ 'c', 'cpp', 'java', 'python', 'javascript', 'scala', 'vim'
+  \ ] }
+  " Open the location-list or quickfix list with preserving the cursor
+  let g:neomake_open_list=2
+  " Set the height of hte location-list or quickfix list
+  let g:neomake_list_height=6
+  " Echo the error for the current line
+  let g:neomake_echo_current_error=1
+  " Place signs by errors recognized
+  let g:neomake_place_signs=1
+  " Set the appearance of the signs
+  let g:neomake_error_sign={'text': '✖', 'texthl': 'NeomakeErrorSign'}
+  let g:neomake_warning_sign={'text': '⚠', 'texthl': 'NeomakeWarningSign'}
+  let g:neomake_message_sign={'text': '➤', 'texthl': 'NeomakeMessageSign'}
+  let g:neomake_info_sign={'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+  " Highlight the columns of errors recognized
+  let g:neomake_highlight_columns=1
+  " Highlight the lines of errors recognized
+  let g:neomake_highlight_lines=0
+  " Run Neomake at save and when reading a file
+  function! NeomakeHook()
+    if exists(":Neomake")
+      augroup neomake_hook
+        autocmd!
+        autocmd BufWritePost * Neomake
+      augroup END
+    endif
+  endfunction
+  autocmd VimEnter * call NeomakeHook()
+  " Set makers for each filetype
+  let g:neomake_c_enabled_makers=['clang']
+  let g:neomake_c_clang_args=['-std=c11', '-Wall', '-Wextra', '-fsyntax-only']
+  let g:neomake_cpp_enable_makers=['clang']
+  let g:neomake_cpp_clang_args=[
+  \ '-std=c++14', '-Wall', '-Wextra', '-fsyntax-only'
+  \ ]
+  let g:neomake_java_enabled_makers=['javac']
+  let g:neomake_python_enabled_makers=['flake8']
+  let g:neomake_javascript_enabled_makers=['eslint']
+  let s:eslint_path=system('PATH=$(npm bin):$PATH && which eslint')
+  let b:neomake_javascript_eslint_exe=substitute(
+  \ s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', ''
+  \ )
+  let g:neomake_scala_enabled_makers=['scalac']
+  let g:neomake_vim_enabled_makers=['vint']
+"" }}}
+
 "" Plugin: Syntastic {{{
   " Syntax checking for Vim with external syntax checker
-  Plug 'scrooloose/syntastic'
+  " TODO: Too slow because of synchronous job
+  " Plug 'scrooloose/syntastic'
   set statusline+=%#warningmsg#
   set statusline+=%{SyntasticStatuslineFlag()}
   set statusline+=%*

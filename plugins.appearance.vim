@@ -15,6 +15,8 @@
   endif
   " Specify theme for airline
   let g:airline_theme='tomorrow'
+  " Show warning and error counts from neomake in vim-airline
+  let g:airline#extensions#neomake#enabled=1
   let g:airline#extensions#tabline#enabled=1
   let g:airline#extensions#tabline#left_sep=''
   let g:airline#extensions#tabline#left_alt_sep='|'
