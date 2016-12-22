@@ -112,3 +112,20 @@ set modelines=4
   " Do smart autoindenting when starting a new line
   set smartindent
 """ }}}
+
+""" Grep {{{
+  if executable('rg')
+    " Use rg(ripgrep)
+    set grepprg=rg\ --no-heading\ --vimgrep
+  elseif executable('pt')
+    " Use pt(The Platinum Searcher)
+    set grepprg=pt\ --nocolor\ --nogroup\ --column
+  elseif executable('ag')
+    " Use ag(The Silver Searcher)
+    set grepprg=ag\ --vimgrep
+  elseif executable('ack')
+    set grepprg=ack\ -H\ --nocolor\ --nogroup
+  endif
+  " Set foramt for vimgrep
+  set grepformat=%f:%l:%c:%m
+""" }}}
