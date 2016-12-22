@@ -18,8 +18,6 @@ set mouse=a
 " Hide the mouse cursor while typing
 set mousehide
 
-" Handy command-line mode
-nnoremap ; :
 " <Esc> is too annoying to type
 inoremap jkj <Esc>
 " Screen sucks, redraw everything

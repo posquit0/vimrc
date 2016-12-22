@@ -37,7 +37,7 @@
   let g:neomake_highlight_lines=0
   " Run Neomake at save and when reading a file
   function! NeomakeHook()
-    if exists(":Neomake")
+    if exists(':Neomake')
       augroup neomake_hook
         autocmd!
         autocmd BufWritePost * Neomake
@@ -100,8 +100,10 @@
     Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
     " Javascript source for Neocomplete/Deoplete
     Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'] }
-    let g:tern#command=["tern"]
-    let g:tern#arguments=["--persistent"]
+    " Add extra filetypes
+    let g:tern#filetypes=['jsx', 'javascript.jsx', 'vue']
+    let g:tern#command=['tern']
+    let g:tern#arguments=['--persistent']
   endif
   " Vim source for Neocomplete/Deoplete
   Plug 'Shougo/neco-vim', { 'for': ['vim'] }

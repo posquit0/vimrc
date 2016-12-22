@@ -37,3 +37,10 @@
   " Open the location window automatically if there are any locations
   let g:qf_auto_open_loclist=1
 "" }}}
+
+"" Plugin: Vim Slash {{{
+  " Provides a set of mappings for enhancing in-buffer search experience
+  " Automatically clears search highlight when cursor is moved
+  " Improved start-search (visual-mode, highlighting without moving)
+  Plug 'junegunn/vim-slash'
+"" }}}
