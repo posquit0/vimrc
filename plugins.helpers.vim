@@ -47,7 +47,7 @@
 
 "" Plugin: Comfortable Motion {{{
   " Brings physics-based smooth scrolling to the Vim
-  Plug 'yuttie/comfortable-motion.vim'
+  " Plug 'yuttie/comfortable-motion.vim'
   " Prevent the plugin from defining those default key mappings
   " let g:comfortable_motion_no_default_key_mappings=1
   " Specify friction coeffecient value
