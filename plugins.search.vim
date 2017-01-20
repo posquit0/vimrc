@@ -48,6 +48,13 @@
   let g:SignatureMarkTextHLDynamic=1
 "" }}}
 
+"" Plugin: TaskList {{{
+  " Eclipse like task list
+  Plug 'TaskList.vim'
+  " Map TaskList to <leader>T
+  nnoremap <silent> <leader>T :TaskList<CR>
+"" }}}
+
 "" Plugin: Tagbar {{{
   " Easy way to browse the tags
   Plug 'majutsushi/tagbar'
