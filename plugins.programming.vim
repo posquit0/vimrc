@@ -35,6 +35,14 @@
   let g:neomake_highlight_columns=1
   " Highlight the lines of errors recognized
   let g:neomake_highlight_lines=0
+  " Change highlight color for the columns recognized
+  augroup neomake_highlights_hook
+    autocmd!
+    autocmd ColorScheme * highlight NeomakeError
+      \ term=bold cterm=bold guibg=red ctermbg=red
+    autocmd ColorScheme * highlight NeomakeErrorSign
+      \ term=bold cterm=bold guifg=red ctermfg=red
+  augroup END
   " Run Neomake at save and when reading a file
   function! NeomakeHook()
     if exists(':Neomake')
