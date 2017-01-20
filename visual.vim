@@ -22,8 +22,8 @@ set showcmd
 set showmatch
 " Bracket blinking
 set matchtime=5
-" Show the current mode
-set showmode
+" Hide the current mode
+set noshowmode
 " Mark 80th column with a highlight color
 if exists('+colorcolumn')
   set colorcolumn=80

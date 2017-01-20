@@ -134,6 +134,14 @@
   let g:deoplete#enable_at_startup=1
   " When a capital letter is included in input, does not ignore
   let g:deoplete#enable_smart_case=1
+  " Set the number of the input completion at the time of key input
+  let g:deoplete#auto_complete_start_length=2
+  " Set the limit of candidates
+  let g:deoplete#max_list=32
+  " Close the preview window after completion is done
+  autocmd CompleteDone * pclose!
+  " Disable the preview window
+  set completeopt-=preview
 "" }}}
 
 "" Plugin: UltiSnips {{{
@@ -186,7 +194,7 @@
   " Display argument type hints when the cursor is left over a function
   let g:tern_show_argument_hints='on_hold'
   " Display function signature in the completion menu
-  let g:tern_show_signature_in_pum=0
+  let g:tern_show_signature_in_pum='0'
   " Disable Shortcuts
   let g:tern_map_keys=0
 "" }}}
