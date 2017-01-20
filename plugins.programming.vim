@@ -16,7 +16,7 @@
 "" Plugin: NeoMake {{{
   " Async :make and linting framework for Vim/NeoVim
   Plug 'neomake/neomake', { 'for': [
-  \ 'c', 'cpp', 'java', 'python', 'javascript', 'scala', 'vim'
+  \ 'c', 'cpp', 'java', 'python', 'javascript', 'scala', 'sh', 'vim'
   \ ] }
   " Open the location-list or quickfix list with preserving the cursor
   let g:neomake_open_list=2
@@ -60,6 +60,7 @@
   \ s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', ''
   \ )
   let g:neomake_scala_enabled_makers=['scalac']
+  let g:neomake_sh_enabled_makers=['shellcheck']
   let g:neomake_vim_enabled_makers=['vint']
 "" }}}
 
