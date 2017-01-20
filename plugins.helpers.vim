@@ -55,3 +55,9 @@
   " Specify air drag coeffecient value
   let g:comfortable_motion_air_drag=2.0
 "" }}}
+
+"" Plugin: Repeat.vim {{{
+  " Enable repeating supported plugin maps with `.`
+  Plug 'tpope/vim-repeat'
+"" }}}
+
