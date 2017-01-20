@@ -50,6 +50,11 @@
   let g:AutoPairsShortcutBackInsert='<C-b>'
 "" }}}
 
+"" Plugin: Vim Surround {{{
+  " All about surroundings: parenthless, brackets, quotes, XML tags and more
+  Plug 'tpope/vim-surround'
+"" }}}
+
 "" Plugin: indentLine {{{
   " Displaying thin vertical lines at each indentation level for code
   " TODO: Very slow after Goyo mode and with long line files
