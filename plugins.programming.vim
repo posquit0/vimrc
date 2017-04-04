@@ -174,6 +174,14 @@
   let g:NERDRemoveExtraSpaces=1
 "" }}}
 
+"" Plugin: Codi {{{
+  " The interactive scratchpad for hackers
+  Plug 'metakirby5/codi.vim'
+  " Set shortcut to toggle Codi
+  nnoremap <Leader><Leader>c :Codi!!<CR>
+  xnoremap <Leader><Leader>c :Codi!!<CR>
+"" }}}
+
 " Javascript & Node
 "" Plugin: Tern for Vim {{{
   " TODO: Key mapping
@@ -288,13 +296,13 @@
   " Configure the number of preceding/following paragraphs to include
   let g:limelight_paragraph_span=1
   " Set shortcut to toggle limelight
-  nnoremap <Leader>l :Limelight!!<CR>
-  xnoremap <Leader>l :Limelight!!<CR>
+  nnoremap <Leader><Leader>l :Limelight!!<CR>
+  xnoremap <Leader><Leader>l :Limelight!!<CR>
 "" }}}
 
 "" Plugin: Vim Instant Markdown {{{
   " Instant markdown Previews from Vim
-  Plug 'suan/vim-instant-markdown'
+  " Plug 'suan/vim-instant-markdown'
   " Only refresh on specific events
   let g:instant_markdown_slow=1
   " Manually control to launch the preview window
