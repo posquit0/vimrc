@@ -13,11 +13,34 @@
   let g:javascript_plugin_jsdoc=1
 "" }}}
 
+"" Plugin: ALE {{{
+  " Asynchronous Lint Engine
+  Plug 'w0rp/ale'
+  " Set the language specific linters
+  let g:ale_linters={
+  \ 'javascript': ['eslint'],
+  \ }
+  " No lint everytime for my battery
+  let g:ale_lint_on_text_changed='normal'
+  " Run after the delay
+  let g:ale_lint_delay=400
+  " Run on opening a file
+  let g:ale_lint_on_enter=1
+  " Don't open loclist
+  let g:ale_open_list=0
+  " Customize the output format of statusline
+  let g:ale_statusline_format=['⨉ %d', '⚠ %d', '⬥ ok']
+  " Customize the echo message
+  let g:ale_echo_msg_error_str='E'
+  let g:ale_echo_msg_warning_str='W'
+  let g:ale_echo_msg_format='[%severity%:%linter%] %s'
+"" }}}
+
 "" Plugin: NeoMake {{{
   " Async :make and linting framework for Vim/NeoVim
-  Plug 'neomake/neomake', { 'for': [
-  \ 'c', 'cpp', 'java', 'python', 'javascript', 'scala', 'sh', 'vim'
-  \ ] }
+  " Plug 'neomake/neomake', { 'for': [
+  " \ 'c', 'cpp', 'java', 'python', 'javascript', 'scala', 'sh', 'vim'
+  " \ ] }
   " Open the location-list or quickfix list with preserving the cursor
   let g:neomake_open_list=2
   " Set the height of hte location-list or quickfix list
