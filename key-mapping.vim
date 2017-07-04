@@ -8,7 +8,9 @@
 let mapleader=","
 let g:mapleader=","
 " Allow cursor keys in insert mode
-set esckeys
+if !has('nvim')
+  set esckeys
+endif
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 " Time to wait after ESC (default causes an annoying delay)
