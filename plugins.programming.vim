@@ -167,6 +167,35 @@
   set completeopt-=preview
 "" }}}
 
+"" Plugin: Language Servers {{{
+  " Language server for JavaScript and TypeScript
+  Plug 'sourcegraph/javascript-typescript-langserver', { 'do': 'npm install && npm run build' }
+"" }}}
+
+"" Plugin: LanguageClient(NeoVIM only) {{{
+  " Support Language Server Protocol for NeoVIM
+  if has('nvim')
+    Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+    " Automatically start language servers
+    let g:LanguageClient_autoStart=1
+    " Define commands to execute to start language servers
+    let g:LanguageClient_serverCommands={
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'javascript': ['node', '$VIM_HOME/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ 'javascript.jsx': ['node', '$VIM_HOME/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ 'jsx': ['node', '$VIM_HOME/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ }
+    " Disable diagnostics integration
+    let g:LanguageClient_diagnosticsEnable=0
+    " Set selection UI used when there are multiple entries
+    let g:LanguageClient_selectionUI='fzf'
+
+    nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+    nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+    nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+  endif
+"" }}}
+
 "" Plugin: UltiSnips {{{
   " Snippet engine for Vim
   Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
