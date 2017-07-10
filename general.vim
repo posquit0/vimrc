@@ -35,15 +35,23 @@ set shell=sh
 " Respect modeline in files
 set modeline
 set modelines=4
+"" Python
+" Figure out the system Python for Neovim.
+if exists("$VIRTUAL_ENV")
+  let g:python3_host_prog=substitute(system('which -a python3 | head -n2 | tail -n1'), '\n', '', 'g')
+else
+  let g:python3_host_prog=substitute(system('which python3'), '\n', '', 'g')
+endif
+
 
 """ Auto Commands {{{
-  if has("autocmd")
+  if has('autocmd')
     " Auto reload vimrc
     " augroup reload_vimrc
     "   autocmd!
     "   autocmd BufWritePost $MYVIMRC,*.vim
     "     \ source $MYVIMRC |
-    "     \ echo "Reloaded VIM Configurations"
+    "     \ echo 'Reloaded VIM Configurations'
     " augroup END
     " Restore cursor position when opening file
     augroup restore_cursor
