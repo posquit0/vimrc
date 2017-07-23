@@ -16,9 +16,16 @@
 "" Plugin: ALE {{{
   " Asynchronous Lint Engine
   Plug 'w0rp/ale'
+  " Enable ALE
+  let g:ale_enable=1
   " Set the language specific linters
   let g:ale_linters={
   \ 'javascript': ['eslint'],
+  \ 'python': ['flake8'],
+  \ }
+  " Set aliases from one filetype to another
+  let g:ale_linter_aliases={
+  \ 'javascript': ['javascript', 'javascript.jsx', 'jsx'],
   \ }
   " No lint everytime for my battery
   let g:ale_lint_on_text_changed='normal'
@@ -26,6 +33,10 @@
   let g:ale_lint_delay=400
   " Run on opening a file
   let g:ale_lint_on_enter=1
+  " Run on saving a file
+  let g:ale_lint_on_save=1
+  " Run on leaving insert mode
+  let g:ale_lint_on_insert_leave=1
   " Don't open loclist
   let g:ale_open_list=0
   " Customize the output format of statusline
@@ -130,6 +141,8 @@
   " Dark powered asynchronous completion framework
   if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
+    " Python source for Deoplete
+    Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
     " Javascript source for Deoplete
     Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'] }
     " Add extra filetypes
@@ -175,12 +188,13 @@
 "" Plugin: LanguageClient(NeoVIM only) {{{
   " Support Language Server Protocol for NeoVIM
   if has('nvim')
-    Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+    " Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
     " Automatically start language servers
     let g:LanguageClient_autoStart=1
     " Define commands to execute to start language servers
     let g:LanguageClient_serverCommands={
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'python': ['pyls'],
     \ 'javascript': ['node', '$VIM_HOME/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
     \ 'javascript.jsx': ['node', '$VIM_HOME/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
     \ 'jsx': ['node', '$VIM_HOME/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
@@ -190,9 +204,9 @@
     " Set selection UI used when there are multiple entries
     let g:LanguageClient_selectionUI='fzf'
 
-    nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-    nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-    nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+    " nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+    " nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+    " nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
   endif
 "" }}}
 
