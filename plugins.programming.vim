@@ -147,8 +147,18 @@
     Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'] }
     " Add extra filetypes
     let g:tern#filetypes=['jsx', 'javascript.jsx', 'vue']
+    " Use tern_for_vim
     let g:tern#command=['tern']
     let g:tern#arguments=['--persistent']
+    " Include documentation strings (if found) in the result data
+    let g:deoplete#sources#ternjs#docs=1
+    " Use a case-insensitive compare
+    let g:deoplete#sources#ternjs#case_insensitive=1
+    " Sort the result set
+    let g:deoplete#sources#ternjs#sort=1
+    " Ignore JavaScript keywords when completing
+    let g:deoplete#sources#ternjs#include_keywords=0
+
     if executable('gocode')
       " Go source for Deoplete
       Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
