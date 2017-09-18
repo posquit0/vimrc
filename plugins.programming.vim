@@ -113,6 +113,12 @@
     let g:tern#filetypes=['jsx', 'javascript.jsx', 'vue']
     let g:tern#command=['tern']
     let g:tern#arguments=['--persistent']
+    " Python source for Deoplete
+    Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
+    " Enable caching of completions for faster results
+    let g:deoplete#sources#jedi#enable_cache=1
+    " Show docstring in preview window
+    let g:deoplete#sources#jedi#show_docstring=0
     if executable('gocode')
       " Go source for Deoplete
       Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
