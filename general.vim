@@ -21,8 +21,10 @@ set ttyfast
 " Walk directory tree upto $HOME looking for tags
 set tags=./tags;$HOME
 " Don’t add empty newlines at the end of files
-set binary
-set noeol
+" set binary
+" set noendofline
+" Add empty newlines at the end of files
+set endofline
 " Automatically change window's cwd to file's dir
 set autochdir
 " Set path to viminfo
