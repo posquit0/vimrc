@@ -6,23 +6,24 @@
 
 " GUI configuration for each OS
 
-if has("unix")
+if has('unix')
 """ Unix & Linux {{{
-  let s:uname=substitute(system("uname -s"), '\n', '', '')
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+  let s:uname=substitute(system('uname -s'), '\n', '', '')
+  if s:uname == 'Darwin'
+""" OS X {{{
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+""" }}}
+  else
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+  endif
 """ }}}
 
-elseif has("gui_win32")
+elseif has('gui_win32')
 """ Window {{{
 
 """ }}}
 
-elseif has("gui_gtk2")
+elseif has('gui_gtk2')
 """ GTK32 {{{
-""" }}}
-
-elseif has("unix") && s:uname == "Darwin"
-""" OS X {{{
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
 """ }}}
 endif

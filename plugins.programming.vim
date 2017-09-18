@@ -13,11 +13,45 @@
   let g:javascript_plugin_jsdoc=1
 "" }}}
 
+"" Plugin: ALE {{{
+  " Asynchronous Lint Engine
+  Plug 'w0rp/ale'
+  " Enable ALE
+  let g:ale_enable=1
+  " Set the language specific linters
+  let g:ale_linters={
+  \ 'javascript': ['eslint'],
+  \ 'python': ['flake8'],
+  \ }
+  " Set aliases from one filetype to another
+  let g:ale_linter_aliases={
+  \ 'javascript': ['javascript', 'javascript.jsx', 'jsx'],
+  \ }
+  " No lint everytime for my battery
+  let g:ale_lint_on_text_changed='normal'
+  " Run after the delay
+  let g:ale_lint_delay=400
+  " Run on opening a file
+  let g:ale_lint_on_enter=1
+  " Run on saving a file
+  let g:ale_lint_on_save=1
+  " Run on leaving insert mode
+  let g:ale_lint_on_insert_leave=1
+  " Don't open loclist
+  let g:ale_open_list=0
+  " Customize the output format of statusline
+  let g:ale_statusline_format=['⨉ %d', '⚠ %d', '⬥ ok']
+  " Customize the echo message
+  let g:ale_echo_msg_error_str='E'
+  let g:ale_echo_msg_warning_str='W'
+  let g:ale_echo_msg_format='[%severity%:%linter%] %s'
+"" }}}
+
 "" Plugin: NeoMake {{{
   " Async :make and linting framework for Vim/NeoVim
-  Plug 'neomake/neomake', { 'for': [
-  \ 'c', 'cpp', 'java', 'python', 'javascript', 'scala', 'sh', 'vim'
-  \ ] }
+  " Plug 'neomake/neomake', { 'for': [
+  " \ 'c', 'cpp', 'java', 'python', 'javascript', 'scala', 'sh', 'vim'
+  " \ ] }
   " Open the location-list or quickfix list with preserving the cursor
   let g:neomake_open_list=2
   " Set the height of hte location-list or quickfix list
@@ -111,14 +145,25 @@
     Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'] }
     " Add extra filetypes
     let g:tern#filetypes=['jsx', 'javascript.jsx', 'vue']
+    " Use tern_for_vim
     let g:tern#command=['tern']
     let g:tern#arguments=['--persistent']
+    " Include documentation strings (if found) in the result data
+    let g:deoplete#sources#ternjs#docs=1
+    " Use a case-insensitive compare
+    let g:deoplete#sources#ternjs#case_insensitive=1
+    " Sort the result set
+    let g:deoplete#sources#ternjs#sort=1
+    " Ignore JavaScript keywords when completing
+    let g:deoplete#sources#ternjs#include_keywords=0
+
     " Python source for Deoplete
     Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
     " Enable caching of completions for faster results
     let g:deoplete#sources#jedi#enable_cache=1
     " Show docstring in preview window
     let g:deoplete#sources#jedi#show_docstring=0
+
     if executable('gocode')
       " Go source for Deoplete
       Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
@@ -150,6 +195,36 @@
   set completeopt-=preview
 "" }}}
 
+"" Plugin: Language Servers {{{
+  " Language server for JavaScript and TypeScript
+  Plug 'sourcegraph/javascript-typescript-langserver', { 'do': 'npm install && npm run build' }
+"" }}}
+
+"" Plugin: LanguageClient(NeoVIM only) {{{
+  " Support Language Server Protocol for NeoVIM
+  if has('nvim')
+    " Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+    " Automatically start language servers
+    let g:LanguageClient_autoStart=1
+    " Define commands to execute to start language servers
+    let g:LanguageClient_serverCommands={
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'python': ['pyls'],
+    \ 'javascript': ['node', '$VIM_HOME/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ 'javascript.jsx': ['node', '$VIM_HOME/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ 'jsx': ['node', '$VIM_HOME/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ }
+    " Disable diagnostics integration
+    let g:LanguageClient_diagnosticsEnable=0
+    " Set selection UI used when there are multiple entries
+    let g:LanguageClient_selectionUI='fzf'
+
+    " nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+    " nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+    " nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+  endif
+"" }}}
+
 "" Plugin: UltiSnips {{{
   " Snippet engine for Vim
   Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -178,6 +253,14 @@
   let g:NERDSpaceDelims=1
   " Remove spaces around comment delimiters
   let g:NERDRemoveExtraSpaces=1
+"" }}}
+
+"" Plugin: Codi {{{
+  " The interactive scratchpad for hackers
+  Plug 'metakirby5/codi.vim'
+  " Set shortcut to toggle Codi
+  nnoremap <Leader><Leader>c :Codi!!<CR>
+  xnoremap <Leader><Leader>c :Codi!!<CR>
 "" }}}
 
 " Javascript & Node
@@ -294,13 +377,13 @@
   " Configure the number of preceding/following paragraphs to include
   let g:limelight_paragraph_span=1
   " Set shortcut to toggle limelight
-  nnoremap <Leader>l :Limelight!!<CR>
-  xnoremap <Leader>l :Limelight!!<CR>
+  nnoremap <Leader><Leader>l :Limelight!!<CR>
+  xnoremap <Leader><Leader>l :Limelight!!<CR>
 "" }}}
 
 "" Plugin: Vim Instant Markdown {{{
   " Instant markdown Previews from Vim
-  Plug 'suan/vim-instant-markdown'
+  " Plug 'suan/vim-instant-markdown'
   " Only refresh on specific events
   let g:instant_markdown_slow=1
   " Manually control to launch the preview window
