@@ -13,7 +13,7 @@
 "" Plugin: Sudo-Vim {{{
   " Sudo will ask for your password if need be
   " Usage: :e sudo:/etc/passwd
-  Plug 'sudo.vim'
+  Plug 'vim-scripts/sudo.vim'
 "" }}}
 
 "" Plugin: Vim QF {{{

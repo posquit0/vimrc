@@ -50,7 +50,7 @@
 
 "" Plugin: TaskList {{{
   " Eclipse like task list
-  Plug 'TaskList.vim'
+  Plug 'vim-scripts/TaskList.vim'
   " Map TaskList to <leader>T
   nnoremap <silent> <leader>T :TaskList<CR>
 "" }}}
