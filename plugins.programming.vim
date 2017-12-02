@@ -137,6 +137,20 @@
   let g:syntastic_sh_checkers=['shellcheck']
 "" }}}
 
+"" Plugin: Vim Dispatch {{{
+  " Asynchronous build and test dispatcher
+  Plug 'tpope/vim-dispatch'
+"" }}}
+
+"" Plugin: Vim Test {{{
+  " Run your tests at the speed of thought
+  Plug 'janko-m/vim-test'
+  " Make test commands execute using other strategy
+  let test#strategy='basic'
+  " Exit after testing with jest
+  let test#javascript#jest#options='--forceExit'
+"" }}}
+
 "" Plugin: Deoplete(NeoVIM only) {{{
   " Dark powered asynchronous completion framework
   if has('nvim')
