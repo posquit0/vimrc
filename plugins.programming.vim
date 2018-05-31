@@ -155,41 +155,45 @@
   " Dark powered asynchronous completion framework
   if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
-    " Javascript source for Deoplete
-    Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'] }
-    " Add extra filetypes
-    let g:tern#filetypes=['jsx', 'javascript.jsx', 'vue']
-    " Use tern_for_vim
-    let g:tern#command=['tern']
-    let g:tern#arguments=['--persistent']
-    " Include documentation strings (if found) in the result data
-    let g:deoplete#sources#ternjs#docs=1
-    " Use a case-insensitive compare
-    let g:deoplete#sources#ternjs#case_insensitive=1
-    " Sort the result set
-    let g:deoplete#sources#ternjs#sort=1
-    " Ignore JavaScript keywords when completing
-    let g:deoplete#sources#ternjs#include_keywords=0
+  else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
+  " Javascript source for Deoplete
+  Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'] }
+  " Add extra filetypes
+  let g:tern#filetypes=['jsx', 'javascript.jsx', 'vue']
+  " Use tern_for_vim
+  let g:tern#command=['tern']
+  let g:tern#arguments=['--persistent']
+  " Include documentation strings (if found) in the result data
+  let g:deoplete#sources#ternjs#docs=1
+  " Use a case-insensitive compare
+  let g:deoplete#sources#ternjs#case_insensitive=1
+  " Sort the result set
+  let g:deoplete#sources#ternjs#sort=1
+  " Ignore JavaScript keywords when completing
+  let g:deoplete#sources#ternjs#include_keywords=0
 
-    " Python source for Deoplete
-    Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
-    " Enable caching of completions for faster results
-    let g:deoplete#sources#jedi#enable_cache=1
-    " Show docstring in preview window
-    let g:deoplete#sources#jedi#show_docstring=0
+  " Python source for Deoplete
+  Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
+  " Enable caching of completions for faster results
+  let g:deoplete#sources#jedi#enable_cache=1
+  " Show docstring in preview window
+  let g:deoplete#sources#jedi#show_docstring=0
 
-    if executable('gocode')
-      " Go source for Deoplete
-      Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
-      " By default(not set), Find the gocode binary in $PATH environment
-      let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
-      " By default, the completion word list is in the sort order of gocode
-      " Available values are [package, func, type, var, const]
-      let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
-      " Use static json caching Go stdlib package API
-      let g:deoplete#sources#go#use_cache=1
-      let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
-    endif
+  if executable('gocode')
+    " Go source for Deoplete
+    Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
+    " By default(not set), Find the gocode binary in $PATH environment
+    let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
+    " By default, the completion word list is in the sort order of gocode
+    " Available values are [package, func, type, var, const]
+    let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
+    " Use static json caching Go stdlib package API
+    let g:deoplete#sources#go#use_cache=1
+    let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
   endif
   " Vim source for Neocomplete/Deoplete
   Plug 'Shougo/neco-vim', { 'for': ['vim'] }

@@ -58,10 +58,10 @@
 "" Plugin: indentLine {{{
   " Displaying thin vertical lines at each indentation level for code
   " TODO: Very slow after Goyo mode and with long line files
-  " Plug 'Yggdroot/indentLine'
+  Plug 'Yggdroot/indentLine'
   " Specify a character to  be used as indent line
-  " let g:indentLine_char='┆'
-  let g:indentLine_char='|'
+  let g:indentLine_char='┆'
+  " let g:indentLine_char='|'
   " Specify a character to  be used as indent line on the first level
   let g:indentLine_first_char='¦'
   " Whether the first indent level should be shown
@@ -94,7 +94,7 @@
 
 "" Plugin: Local Indent Guide {{{
   " Display a guide for the current line's indent level
-  Plug 'tweekmonster/local-indent.vim'
+  " Plug 'tweekmonster/local-indent.vim'
   " Enable it with options(+hl, -hl, +cc, -cc)
-  autocmd FileType * LocalIndentGuide +hl +cc
+  " autocmd FileType * LocalIndentGuide +hl +cc
 "" }}}
