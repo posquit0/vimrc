@@ -13,3 +13,8 @@
   " Browse Hacker News inside Vim
   Plug 'ryanss/vim-hackernews'
 "" }}}
+
+"" Plugin: WakaTime {{{
+  " Productivity metrics, goals, leaderboards, and automatic time tracking
+  Plug 'wakatime/vim-wakatime'
+"" }}}
