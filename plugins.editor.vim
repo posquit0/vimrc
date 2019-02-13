@@ -92,6 +92,11 @@
   let g:lengthmatters_exclude_readonly=1
 "" }}}
 
+"" Plugin: Number Toggle {{{
+  " Toggles between hybrid and absolute line numbers automatically
+  Plug 'jeffkreeftmeijer/vim-numbertoggle'
+"" }}}
+
 "" Plugin: Local Indent Guide {{{
   " Display a guide for the current line's indent level
   " Plug 'tweekmonster/local-indent.vim'
