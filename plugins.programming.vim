@@ -37,8 +37,10 @@
   let g:ale_lint_on_save=1
   " Run on leaving insert mode
   let g:ale_lint_on_insert_leave=1
-  " Don't open loclist
-  let g:ale_open_list=0
+  " Don't open loclist if false
+  let g:ale_open_list=1
+  " Set the number of error lines
+  let g:ale_list_window_size=3
   " Customize the output format of statusline
   let g:ale_statusline_format=['⨉ %d', '⚠ %d', '⬥ ok']
   " Customize the echo message
@@ -151,10 +153,15 @@
   let test#javascript#jest#options='--forceExit'
 "" }}}
 
+"" Plugin: EchoDoc {{{
+  " Displays function signatures from completions in the command line
+  Plug 'Shougo/echodoc.vim'
+"" }}}
+
 "" Plugin: Deoplete(NeoVIM only) {{{
   " Dark powered asynchronous completion framework
   if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   else
     Plug 'Shougo/deoplete.nvim'
     Plug 'roxma/nvim-yarp'
@@ -246,6 +253,12 @@
 "" Plugin: UltiSnips {{{
   " Snippet engine for Vim
   Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+  " Explicitly set Python version to use
+  if has('python3')
+    let g:UltiSnipsUsePythonVersion=3
+  else
+    let g:UltiSnipsUsePythonVersion=2
+  endif
   " Configure keys trigerring UltiSnips
   let g:UltiSnipsExpandTrigger='<Tab>'
   let g:UltiSnipsJumpForwardTrigger='<Tab>'
