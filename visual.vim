@@ -12,6 +12,8 @@ set number
 " Enable relative number for line
 " (Constantly computing the relative nubmers is expensive)
 set relativenumber
+" Always show signcolumns
+set signcolumn=yes
 " Show ruler
 set ruler
 " Always show tab pannel
