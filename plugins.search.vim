@@ -51,8 +51,8 @@
 "" Plugin: TaskList {{{
   " Eclipse like task list
   Plug 'vim-scripts/TaskList.vim'
-  " Map TaskList to <leader>T
-  nnoremap <silent> <leader>T :TaskList<CR>
+  " Map TaskList to <leader>tt
+  nnoremap <silent> <leader>tt :TaskList<CR>
 "" }}}
 
 "" Plugin: Tagbar {{{
