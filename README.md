@@ -11,7 +11,7 @@
 [**This VIM configuration**](https://github.com/posquit0/vimrc) is written by [posquit0](https://github.com/posquit0/) to improve the environment in VIM.
 
 
-## <a name="usage">Usage
+## Usage
 
 ```sh
 $ cd ~
@@ -22,12 +22,18 @@ $ ln -s ~/.vim .config/nvim
 $ vim +PlugInstall +qall now
 ```
 
-## <a name="contact">Contact
+## Self Promotion
+
+Like this project? Follow the repository on [GitHub](https://github.com/posquit0/vimrc). And if you're feeling especially charitable, follow [posquit0](https://posquit0.com) on [GitHub](https://github.com/posquit0).
+
+
+## Contact
 
 If you have any questions, feel free to join me at [`#posquit0` on Freenode](irc://irc.freenode.net/posquit0) and ask away. Click [here](https://kiwiirc.com/client/irc.freenode.net/posquit0) to connect.
 
 
-## <a name="license">License
+## License
 
-- Claud D. Park <posquit0.bj@gmail.com>
-- [MIT Liense](https://github.com/posquit0/node-iamporter/blob/master/LICENSE)
+Provided under the terms of the [MIT License](https://github.com/posquit0/vimrc/blob/master/LICENSE).
+
+Copyright © 2014-2019, [Byungjin Park](http://www.posquit0.com).
