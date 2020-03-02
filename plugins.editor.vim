@@ -28,37 +28,37 @@
   let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 "" }}}
 
-"" Plugin: Vim Multiple Cursors {{{
-  " Bringing Sublime Text's awesome multiple selection feature into Vim
-  Plug 'terryma/vim-multiple-cursors'
-  " Turn off the default key bindings
-  let g:multi_cursor_use_default_mapping=0
-  " Configure custom key bindings
-  let g:multi_cursor_next_key='<C-n>'
-  let g:multi_cursor_prev_key='<C-p>'
-  let g:multi_cursor_skip_key='<C-x>'
-  let g:multi_cursor_quit_key='<Esc>'
-  " Quit and delete all existing cursor in visual mode after pressing quit key
-  let g:multi_cursor_exit_from_visual_mode=1
-  " Quit and delete all existing cursor in insert mode after pressing quit key
-  let g:multi_cursor_exit_from_insert_mode=0
-"" }}}
+""" Plugin: Vim Multiple Cursors {{{
+"  " Bringing Sublime Text's awesome multiple selection feature into Vim
+"  Plug 'terryma/vim-multiple-cursors'
+"  " Turn off the default key bindings
+"  let g:multi_cursor_use_default_mapping=0
+"  " Configure custom key bindings
+"  let g:multi_cursor_next_key='<C-n>'
+"  let g:multi_cursor_prev_key='<C-p>'
+"  let g:multi_cursor_skip_key='<C-x>'
+"  let g:multi_cursor_quit_key='<Esc>'
+"  " Quit and delete all existing cursor in visual mode after pressing quit key
+"  let g:multi_cursor_exit_from_visual_mode=1
+"  " Quit and delete all existing cursor in insert mode after pressing quit key
+"  let g:multi_cursor_exit_from_insert_mode=0
+""" }}}
 
-"" Plugin: Auto Pairs {{{
-  " For intensely orgasmic commenting
-  Plug 'jiangmiao/auto-pairs'
-  " Shortcut for fast wrapping the word
-  let g:AutoPairsShortcutFastWrap='<C-e>'
-  " Enable FlyMode
-  let g:AutoPairsFlyMode=1
-  " Insert the key at the Fly Mode jumped postion
-  let g:AutoPairsShortcutBackInsert='<C-b>'
-"" }}}
-
-"" Plugin: Vim Surround {{{
-  " All about surroundings: parenthless, brackets, quotes, XML tags and more
-  Plug 'tpope/vim-surround'
-"" }}}
+""" Plugin: Auto Pairs {{{
+"  " For intensely orgasmic commenting
+"  Plug 'jiangmiao/auto-pairs'
+"  " Shortcut for fast wrapping the word
+"  let g:AutoPairsShortcutFastWrap='<C-e>'
+"  " Enable FlyMode
+"  let g:AutoPairsFlyMode=1
+"  " Insert the key at the Fly Mode jumped postion
+"  let g:AutoPairsShortcutBackInsert='<C-b>'
+""" }}}
+"
+""" Plugin: Vim Surround {{{
+"  " All about surroundings: parenthless, brackets, quotes, XML tags and more
+"  Plug 'tpope/vim-surround'
+""" }}}
 
 "" Plugin: indentLine {{{
   " Displaying thin vertical lines at each indentation level for code

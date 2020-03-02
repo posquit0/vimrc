@@ -4,6 +4,7 @@
 " http://www.posquit0.com/
 
 
+
 " Make Vim more useful
 set nocompatible
 " Use path '~/.vim' even on non-unix machine

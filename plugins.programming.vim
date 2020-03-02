@@ -164,67 +164,67 @@
   Plug 'Shougo/echodoc.vim'
 "" }}}
 
-"" Plugin: Deoplete(NeoVIM only) {{{
-  " Dark powered asynchronous completion framework
-  if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-  endif
-  " Javascript source for Deoplete
-  Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'] }
-  " Add extra filetypes
-  let g:tern#filetypes=['jsx', 'javascript.jsx', 'vue']
-  " Use tern_for_vim
-  let g:tern#command=['tern']
-  let g:tern#arguments=['--persistent']
-  " Include documentation strings (if found) in the result data
-  let g:deoplete#sources#ternjs#docs=1
-  " Use a case-insensitive compare
-  let g:deoplete#sources#ternjs#case_insensitive=1
-  " Sort the result set
-  let g:deoplete#sources#ternjs#sort=1
-  " Ignore JavaScript keywords when completing
-  let g:deoplete#sources#ternjs#include_keywords=0
-
-  " Python source for Deoplete
-  Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
-  " Enable caching of completions for faster results
-  let g:deoplete#sources#jedi#enable_cache=1
-  " Show docstring in preview window
-  let g:deoplete#sources#jedi#show_docstring=0
-
-  if executable('gocode')
-    " Go source for Deoplete
-    Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
-    " By default(not set), Find the gocode binary in $PATH environment
-    let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
-    " By default, the completion word list is in the sort order of gocode
-    " Available values are [package, func, type, var, const]
-    let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
-    " Use static json caching Go stdlib package API
-    let g:deoplete#sources#go#use_cache=1
-    let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
-  endif
-  " Vim source for Neocomplete/Deoplete
-  Plug 'Shougo/neco-vim', { 'for': ['vim'] }
-  " Insert mode completion of words in adjacent tmux panes
-  Plug 'wellle/tmux-complete.vim'
-  " Run deoplete automatically
-  let g:deoplete#enable_at_startup=1
-  " When a capital letter is included in input, does not ignore
-  let g:deoplete#enable_smart_case=1
-  " Set the number of the input completion at the time of key input
-  let g:deoplete#auto_complete_start_length=2
-  " Set the limit of candidates
-  let g:deoplete#max_list=32
-  " Close the preview window after completion is done
-  autocmd CompleteDone * pclose!
-  " Disable the preview window
-  set completeopt-=preview
-"" }}}
+""" Plugin: Deoplete(NeoVIM only) {{{
+"  " Dark powered asynchronous completion framework
+"  if has('nvim')
+"    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"  else
+"    Plug 'Shougo/deoplete.nvim'
+"    Plug 'roxma/nvim-yarp'
+"    Plug 'roxma/vim-hug-neovim-rpc'
+"  endif
+"  " Javascript source for Deoplete
+"  Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'] }
+"  " Add extra filetypes
+"  let g:tern#filetypes=['jsx', 'javascript.jsx', 'vue']
+"  " Use tern_for_vim
+"  let g:tern#command=['tern']
+"  let g:tern#arguments=['--persistent']
+"  " Include documentation strings (if found) in the result data
+"  let g:deoplete#sources#ternjs#docs=1
+"  " Use a case-insensitive compare
+"  let g:deoplete#sources#ternjs#case_insensitive=1
+"  " Sort the result set
+"  let g:deoplete#sources#ternjs#sort=1
+"  " Ignore JavaScript keywords when completing
+"  let g:deoplete#sources#ternjs#include_keywords=0
+"
+"  " Python source for Deoplete
+"  Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
+"  " Enable caching of completions for faster results
+"  let g:deoplete#sources#jedi#enable_cache=1
+"  " Show docstring in preview window
+"  let g:deoplete#sources#jedi#show_docstring=0
+"
+"  if executable('gocode')
+"    " Go source for Deoplete
+"    Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
+"    " By default(not set), Find the gocode binary in $PATH environment
+"    let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
+"    " By default, the completion word list is in the sort order of gocode
+"    " Available values are [package, func, type, var, const]
+"    let g:deoplete#sources#go#sort_class=['package', 'func', 'type', 'var', 'const']
+"    " Use static json caching Go stdlib package API
+"    let g:deoplete#sources#go#use_cache=1
+"    let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
+"  endif
+"  " Vim source for Neocomplete/Deoplete
+"  Plug 'Shougo/neco-vim', { 'for': ['vim'] }
+"  " Insert mode completion of words in adjacent tmux panes
+"  Plug 'wellle/tmux-complete.vim'
+"  " Run deoplete automatically
+"  let g:deoplete#enable_at_startup=1
+"  " When a capital letter is included in input, does not ignore
+"  let g:deoplete#enable_smart_case=1
+"  " Set the number of the input completion at the time of key input
+"  let g:deoplete#auto_complete_start_length=2
+"  " Set the limit of candidates
+"  let g:deoplete#max_list=32
+"  " Close the preview window after completion is done
+"  autocmd CompleteDone * pclose!
+"  " Disable the preview window
+"  set completeopt-=preview
+""" }}}
 
 "" Plugin: Language Servers {{{
   " Language server for JavaScript and TypeScript
@@ -261,30 +261,30 @@
   endif
 "" }}}
 
-"" Plugin: UltiSnips {{{
-  " Snippet engine for Vim
-  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-  " Explicitly set Python version to use
-  if has('python3')
-    let g:UltiSnipsUsePythonVersion=3
-  else
-    let g:UltiSnipsUsePythonVersion=2
-  endif
-  " Configure keys trigerring UltiSnips
-  let g:UltiSnipsExpandTrigger='<Tab>'
-  let g:UltiSnipsJumpForwardTrigger='<Tab>'
-  let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
-  let g:UltiSnipsListSnippets='<Tab>l'
-  " If you want :UltiSnipsEdit to split your window.
-  let g:UltiSnipsEditSplit='vertical'
-"" }}}
+""" Plugin: UltiSnips {{{
+"  " Snippet engine for Vim
+"  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+"  " Explicitly set Python version to use
+"  if has('python3')
+"    let g:UltiSnipsUsePythonVersion=3
+"  else
+"    let g:UltiSnipsUsePythonVersion=2
+"  endif
+"  " Configure keys trigerring UltiSnips
+"  let g:UltiSnipsExpandTrigger='<Tab>'
+"  let g:UltiSnipsJumpForwardTrigger='<Tab>'
+"  let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
+"  let g:UltiSnipsListSnippets='<Tab>l'
+"  " If you want :UltiSnipsEdit to split your window.
+"  let g:UltiSnipsEditSplit='vertical'
+""" }}}
 
-"" Plugin: Endwise {{{
-" Wisely add `end` in ruby, vim, etc
-  Plug 'tpope/vim-endwise', { 'for': [
-  \ 'ruby', 'vim', 'sh', 'zsh', 'matlab', 'snippets'
-  \ ] }
-"" }}}
+""" Plugin: Endwise {{{
+"" Wisely add `end` in ruby, vim, etc
+"  Plug 'tpope/vim-endwise', { 'for': [
+"  \ 'ruby', 'vim', 'sh', 'zsh', 'matlab', 'snippets'
+"  \ ] }
+""" }}}
 
 "" Plugin: NERD Commenter {{{
   " For intensely orgasmic commenting
@@ -297,90 +297,13 @@
   let g:NERDRemoveExtraSpaces=1
 "" }}}
 
-"" Plugin: Codi {{{
-  " The interactive scratchpad for hackers
-  Plug 'metakirby5/codi.vim'
-  " Set shortcut to toggle Codi
-  nnoremap <Leader><Leader>c :Codi!!<CR>
-  xnoremap <Leader><Leader>c :Codi!!<CR>
-"" }}}
-
-" Javascript & Node
-"" Plugin: Tern for Vim {{{
-  " TODO: Key mapping
-  " Tern-based Javascript editing support
-  " Hook into omni completion to handle autocompletion and provide more
-  function! BuildTern(info)
-    " info is a dictionary with 3 fields
-    " - name:   name of the plugin
-    " - status: 'installed', 'updated', or 'unchanged'
-    " - force:  set on PlugInstall! or PlugUpdate!
-    if a:info.status == 'installed' || a:info.force
-      !npm install
-    endif
-  endfunction
-  Plug 'marijnh/tern_for_vim', { 'for': ['javascript'], 'do': function('BuildTern') }
-  " Set timeout
-  let g:tern_request_timeout=1
-  " Display argument type hints when the cursor is left over a function
-  let g:tern_show_argument_hints='on_hold'
-  " Display function signature in the completion menu
-  let g:tern_show_signature_in_pum='0'
-  " Disable Shortcuts
-  let g:tern_map_keys=0
-"" }}}
-
-"" Plugin: Vim Node {{{
-  " Tools and environment to make Vim superb for developing with Node.js
-  Plug 'moll/vim-node'
-"" }}}
-
-"" Plugin: Javascript Libraries Syntax {{{
-  " Syntax file for JavaScript libraries
-  Plug 'othree/javascript-libraries-syntax.vim'
-  " Set up used libraries
-  let g:used_javascript_libs='react,jquery,underscore,handlebars'
-"" }}}
-
-" HTML & CSS
-"" Plugin: Emmet {{{
-  " Provide Zen-coding for Vim
-  Plug 'mattn/emmet-vim', {
-  \ 'for': [
-  \   'html', 'haml', 'jinja', 'hbs', 'html.handlebars', 'xml',
-  \   'css', 'less', 'sass', 'javascript'
-  \ ]
-  \}
-  " Enable all functions, which is equal to
-  " n: normal, i: insert: v: visual, a: all
-  let g:user_emmet_mode='a'
-  " Remap the default Emmet leader key <C-Y>
-  let g:user_emmet_leader_key='<C-Y>'
-  " Customize the behavior of the languages
-  let g:user_emmet_settings={
-  \ 'javascript.jsx': {
-  \   'extends': 'jsx',
-  \ },
-  \ 'javascript': {
-  \   'extends': 'jsx',
-  \ },
-  \ 'xml': {
-  \   'extends': 'html',
-  \ },
-  \ 'haml': {
-  \   'extends': 'html',
-  \ },
-  \ 'jinja': {
-  \   'extends': 'html',
-  \ },
-  \ 'hbs': {
-  \   'extends': 'html',
-  \ },
-  \ 'html.handlebars': {
-  \   'extends': 'html',
-  \ },
-  \}
-"" }}}
+""" Plugin: Codi {{{
+"  " The interactive scratchpad for hackers
+"  Plug 'metakirby5/codi.vim'
+"  " Set shortcut to toggle Codi
+"  nnoremap <Leader><Leader>c :Codi!!<CR>
+"  xnoremap <Leader><Leader>c :Codi!!<CR>
+""" }}}
 
 
 " Markdown

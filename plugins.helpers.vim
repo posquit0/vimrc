@@ -61,3 +61,7 @@
   Plug 'tpope/vim-repeat'
 "" }}}
 
+"" Plugin: Which Key {{{
+Plug 'liuchengxu/vim-which-key'
+"" }}}
+
