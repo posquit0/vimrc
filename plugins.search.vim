@@ -21,7 +21,11 @@
 
 "" Plugin: Easymotion {{{
   " Provides a much simpler way to use motions in Vim
+  " Keymap:
+  " <leader><leader>s     Jump to character
+  " <leader><leader>w     Jump to word
   Plug 'Lokaltog/vim-easymotion'
+  let g:EasyMotion_do_mapping = 1
 "" }}}
 
 "" Plugin: Vim Signature {{{
@@ -98,5 +102,6 @@
   " NERDTree and tabs together in Vim
   Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
   " Map NERDTreeToggle to <F11>
-  nnoremap <silent> <F11> :NERDTreeTabsToggle<CR>
+  "nnoremap <silent> <F11> :NERDTreeTabsToggle<CR>
+  nnoremap <silent> <leader>e :NERDTreeTabsToggle<CR>
 "" }}}
