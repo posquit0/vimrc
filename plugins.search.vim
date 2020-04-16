@@ -98,6 +98,15 @@
   \ }
 "" }}}
 
+
+"" Plugin: vim-mark {{{
+  Plug 'inkarkat/vim-ingo-library'
+  Plug 'inkarkat/vim-mark'
+  nunmap <leader>r
+  nunmap <leader>/
+  "xnoremap <leader>rg <Plug>MarkRegex
+"" }}}
+
 "" Plugin: NERDTree Tabs {{{
   " NERDTree and tabs together in Vim
   Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }

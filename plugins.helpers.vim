@@ -42,7 +42,7 @@
   " Provides a set of mappings for enhancing in-buffer search experience
   " Automatically clears search highlight when cursor is moved
   " Improved start-search (visual-mode, highlighting without moving)
-  Plug 'junegunn/vim-slash'
+  "Plug 'junegunn/vim-slash'
 "" }}}
 
 "" Plugin: Comfortable Motion {{{
@@ -63,5 +63,10 @@
 
 "" Plugin: Which Key {{{
 Plug 'liuchengxu/vim-which-key'
+"" }}}
+
+"" Plugin: startuptime.vim {{{
+Plug 'tweekmonster/startuptime.vim'
+
 "" }}}
 
