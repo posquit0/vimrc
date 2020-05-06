@@ -1,0 +1,39 @@
+
+snippet title "Titelize in the Transformation"
+${1:a text}
+${1/\w+\s*/\u$0/g}
+endsnippet
+
+
+snippet simp "Simple" !b
+`!p snip.rv = "hello"`
+endsnippet
+
+snippet ib64 "Import base64" b
+from base64 import b64encode as b64
+from base64 import b64decode as d64
+endsnippet
+
+
+snippet uuid "UUID"
+`!p import uuid
+if not snip.c:
+	snip.rv = uuid.uuid4().hex`
+endsnippet
+
+global !p
+def complete(t,opts):
+	if t:
+		opts = [m[len(t):] for m in opts if m.startswith(t)]
+	if len(opts) == 1:
+		return opts[0]
+	return "(" '|'.join(opts) + ")"
+endglobal
+
+snippet st "Status"
+status $1`!p snip.rv=complete(t[1], ['new','incomplete','invalid'])`
+endsnippet
+
+snippet "rep (\d+) (\w+)"  "description" r
+`!p snip.rv = int(match.group(1))*match.group(2)`
+endsnippet

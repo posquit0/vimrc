@@ -265,23 +265,24 @@
   endif
 "" }}}
 
-""" Plugin: UltiSnips {{{
-"  " Snippet engine for Vim
-"  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-"  " Explicitly set Python version to use
-"  if has('python3')
-"    let g:UltiSnipsUsePythonVersion=3
-"  else
-"    let g:UltiSnipsUsePythonVersion=2
-"  endif
-"  " Configure keys trigerring UltiSnips
-"  let g:UltiSnipsExpandTrigger='<Tab>'
-"  let g:UltiSnipsJumpForwardTrigger='<Tab>'
-"  let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
-"  let g:UltiSnipsListSnippets='<Tab>l'
-"  " If you want :UltiSnipsEdit to split your window.
-"  let g:UltiSnipsEditSplit='vertical'
-""" }}}
+"" Plugin: UltiSnips {{{
+ " Snippet engine for Vim
+ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+ " Explicitly set Python version to use
+ if has('python3')
+   let g:UltiSnipsUsePythonVersion=3
+ else
+   let g:UltiSnipsUsePythonVersion=2
+ endif
+ " Configure keys trigerring UltiSnips
+ let g:UltiSnipsExpandTrigger='<Tab>'
+ "let g:UltiSnipsJumpForwardTrigger='<Tab>'
+ let g:UltiSnipsJumpForwardTrigger='<C-j>'
+ let g:UltiSnipsJumpBackwardTrigger='<C-k>'
+ let g:UltiSnipsListSnippets='<Tab>g'
+ " If you want :UltiSnipsEdit to split your window.
+ let g:UltiSnipsEditSplit='vertical'
+"" }}}
 
 """ Plugin: Endwise {{{
 "" Wisely add `end` in ruby, vim, etc
