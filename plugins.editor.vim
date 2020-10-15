@@ -101,6 +101,22 @@
   let g:indentLine_noConcealCursor=''
 "" }}}
 
+"" Plugin: Local Indent Guide {{{
+  " Display a guide for the current line's indent level
+  " Plug 'tweekmonster/local-indent.vim'
+  " Enable it with options(+hl, -hl, +cc, -cc)
+  " autocmd FileType * LocalIndentGuide +hl +cc
+"" }}}
+
+"" Plugin: Context {{{
+  " Show the context of the currently visible buffer contents
+  Plug 'wellle/context.vim'
+  " Whether to enable the context plugin
+  let g:context_enabled=1
+  " INFO: Issue in Neovim which leads to some artefacts
+  let g:context_nvim_no_redraw=1
+" }}}
+
 "" Plugin: Lengthmatters {{{
   " Highlight the flooding part of an overly long line
   " Plug 'whatyouhide/vim-lengthmatters'
@@ -117,11 +133,4 @@
 "" Plugin: Number Toggle {{{
   " Toggles between hybrid and absolute line numbers automatically
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
-"" }}}
-
-"" Plugin: Local Indent Guide {{{
-  " Display a guide for the current line's indent level
-  " Plug 'tweekmonster/local-indent.vim'
-  " Enable it with options(+hl, -hl, +cc, -cc)
-  " autocmd FileType * LocalIndentGuide +hl +cc
 "" }}}
