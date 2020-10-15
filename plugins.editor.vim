@@ -15,6 +15,23 @@
   autocmd BufWritePre * StripWhitespace
 "" }}}
 
+"" Plugin: Colorizer {{{
+  " The fastest (Neo)Vim plugin for asynchronously displaying the colours in the file
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  " Method to highlight
+  let g:Hexokinase_highlighters=['backgroundfull']
+  " Patterns to match for all filetypes
+  let g:Hexokinase_optInPatterns = [
+  \ 'full_hex',
+  \ 'triple_hex',
+  \ 'rgb',
+  \ 'rgba',
+  \ 'hsl',
+  \ 'hsla',
+  \ 'colour_names'
+  \ ]
+"" }}}
+
 "" Plugin: Targets {{{
   " Provides additional text objects
   Plug 'wellle/targets.vim'
