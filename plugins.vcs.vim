@@ -43,6 +43,17 @@
   nnoremap <leader><leader>d :SignifyHunkDiff<CR>
 "" }}}
 
+"" Plugin: Committia {{{
+  " More pleasant editing on commit messagess
+  Plug 'rhysd/committia.vim'
+  " Specify the width of the edit window
+  let g:committia_edit_window_width=100
+  " If the value is 'always', committia.vim always employs single column mode
+  let g:committia_use_singlecolumn='fallback'
+  " If the width of window is narrower than the value, committia.vim employs single column mode
+  let g:committia_min_window_width=180
+"" }}}
+
 "" Plugin: Gundo {{{
   " Make browsing Vim's powerful undo tree less painful
   Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
