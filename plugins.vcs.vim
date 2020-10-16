@@ -13,20 +13,26 @@
   " The best Git wrapper
   Plug 'tpope/vim-fugitive'
   " Key mappings for convenience
-  nnoremap <Leader>gd :Gvdiff<CR>
-  nnoremap <Leader>gD :Gvdiff HEAD<CR>
-  nnoremap <Leader>gs :Gstatus<CR>:20wincmd +<CR>
-  nnoremap <Leader>gw :Gwrite<CR>
-  nnoremap <Leader>gb :Gblame -w<CR>:vertical resize 26<CR>
-  nnoremap <Leader>gci :Gcommit --verbose<CR>
+  nnoremap <leader>gd :Gvdiff<CR>
+  nnoremap <leader>gD :Gvdiff HEAD<CR>
+  nnoremap <leader>gs :Gstatus<CR>:20wincmd +<CR>
+  nnoremap <leader>gw :Gwrite<CR>
+  nnoremap <leader>gb :Gblame -w<CR>:vertical resize 26<CR>
+  nnoremap <leader>gci :Gcommit --verbose<CR>
 "" }}}
 
 "" Plugin: Vim Signify {{{
   " Indicate added, modified and removed lines based on data of VCS
-  Plug 'mhinz/vim-signify'
+  if has('nvim') || has('patch-8.0.902')
+    Plug 'mhinz/vim-signify'
+  else
+    Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+  endif
   " Key mappings for hunk jumping
   nmap <leader>gn <plug>(signify-next-hunk)
   nmap <leader>gN <plug>(signify-prev-hunk)
+  " Key mappings for hunk diffing
+  nnoremap <leader><leader>d :SignifyHunkDiff<CR>
 "" }}}
 
 "" Plugin: Gundo {{{
