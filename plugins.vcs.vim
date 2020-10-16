@@ -17,13 +17,16 @@
   nnoremap <Leader>gD :Gvdiff HEAD<CR>
   nnoremap <Leader>gs :Gstatus<CR>:20wincmd +<CR>
   nnoremap <Leader>gw :Gwrite<CR>
-  nnoremap <Leader>gb :Gblame -w<CR>:vertical resize 10<CR>
+  nnoremap <Leader>gb :Gblame -w<CR>:vertical resize 26<CR>
   nnoremap <Leader>gci :Gcommit --verbose<CR>
 "" }}}
 
 "" Plugin: Vim Signify {{{
   " Indicate added, modified and removed lines based on data of VCS
   Plug 'mhinz/vim-signify'
+  " Key mappings for hunk jumping
+  nmap <leader>gn <plug>(signify-next-hunk)
+  nmap <leader>gN <plug>(signify-prev-hunk)
 "" }}}
 
 "" Plugin: Gundo {{{
