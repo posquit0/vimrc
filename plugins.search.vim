@@ -75,6 +75,8 @@
   " Close vim if the only window left open is a NERDTree
   autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree')
   \ && b:NERDTree.isTabTree()) | q | endif
+  " Map NERDTreeToggle to <F11>
+  nnoremap <silent> <F11> :NERDTreeToggle<CR>
 "" }}}
 
 "" Plugin: NERDTree Git Plugin {{{
@@ -96,7 +98,6 @@
 
 "" Plugin: NERDTree Tabs {{{
   " NERDTree and tabs together in Vim
-  Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
-  " Map NERDTreeToggle to <F11>
-  nnoremap <silent> <F11> :NERDTreeTabsToggle<CR>
+  " INFO: Not maintained Plugin
+  " Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
 "" }}}
