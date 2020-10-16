@@ -11,6 +11,9 @@
   let g:vim_json_syntax_conceal=0
   " Enable syntax highlighting for JSDocs
   let g:javascript_plugin_jsdoc=1
+
+  " Markdown
+  let g:vim_markdown_conceal=0
 "" }}}
 
 "" Plugin: ALE {{{
@@ -22,6 +25,7 @@
   let g:ale_linters={
   \ 'javascript': ['eslint'],
   \ 'python': ['flake8'],
+  \ 'lua': ['luac', 'luacheck'],
   \ 'terraform': ['tflint'],
   \ }
   " Set aliases from one filetype to another
