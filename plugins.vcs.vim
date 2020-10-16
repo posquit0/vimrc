@@ -13,12 +13,20 @@
   " The best Git wrapper
   Plug 'tpope/vim-fugitive'
   " Key mappings for convenience
-  nnoremap <leader>gd :Gvdiff<CR>
-  nnoremap <leader>gD :Gvdiff HEAD<CR>
   nnoremap <leader>gs :Gstatus<CR>:20wincmd +<CR>
   nnoremap <leader>gw :Gwrite<CR>
-  nnoremap <leader>gb :Gblame -w<CR>:vertical resize 26<CR>
   nnoremap <leader>gci :Gcommit --verbose<CR>
+  nnoremap <leader>gfd :Gvdiff<CR>
+  nnoremap <leader>gfD :Gvdiff HEAD<CR>
+  nnoremap <leader>gfb :Gblame -w<CR>:vertical resize 26<CR>
+"" }}}
+
+"" Plugin: Git Commit Browser {{{
+  " A git commit browser in Vim
+  Plug 'junegunn/gv.vim'
+  " Key mappings for convenience
+  nnoremap <leader>gl :GV --all<CR>
+  nnoremap <leader>gfl :GV! --all<CR>
 "" }}}
 
 "" Plugin: Vim Signify {{{
