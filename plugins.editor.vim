@@ -91,7 +91,9 @@
   " Specify how much indent level do you want to use for indentLine
   let g:indentLine_indentLevel=10
   " Specify a list of file types to disable indent line
-  let g:indentLine_fileTypeExclude=['vim', 'json', 'markdown']
+  let g:indentLine_fileTypeExclude=['vim', 'json', 'markdown', 'nerdtree']
+  " Specify a list of buffer names to disable indentline
+  let g:indentLine_bufNameExclude=['NERD_tree.*']
   " Whether to show leading spaces
   let g:indentLine_leadingSpaceEnabled=1
   " Specify a character to show for leading spaces
