@@ -33,6 +33,7 @@ nnoremap <silent> <Leader>/ :nohlsearch<CR>
 nnoremap <C-k><C-k> :<C-u>execute 'move -1-'. v:count1<CR>
 nnoremap <C-j><C-j> :<C-u>execute 'move +'. v:count1<CR>
 
+
 """ Hex Editor {{{
   " Map HexEditToggle to <F9>
   nnoremap <silent> <F9> :call HexEditToggle()<CR>
@@ -48,12 +49,14 @@ nnoremap <C-j><C-j> :<C-u>execute 'move +'. v:count1<CR>
   endfunction
 " }}}
 
+
 """ Windows {{{
   nnoremap <C-h> <C-w>h
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
 " }}}
+
 
 """ Tabs {{{
   nnoremap <silent> <Tab><Tab> :tabnew<CR>
@@ -79,4 +82,15 @@ nnoremap <C-j><C-j> :<C-u>execute 'move +'. v:count1<CR>
   nnoremap <silent> <Tab>7 :tabnext 7<CR>
   nnoremap <silent> <Tab>8 :tabnext 8<CR>
   nnoremap <silent> <Tab>9 :tabnext 9<CR>
+" }}}
+
+
+""" Indentation {{{
+  " Reselect text after indent/unindent
+  xnoremap < <gv
+  xnoremap > >gv
+  " Tab to indent in visual mode
+  xnoremap <Tab> >gv
+  " Shift+Tab to unindent in visual mode
+  xnoremap <S-Tab> <gv
 " }}}
