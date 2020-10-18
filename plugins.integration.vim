@@ -25,7 +25,7 @@
 
 "" Plugin: Hackernews {{{
   " Browse Hacker News inside Vim
-  Plug 'dansomething/vim-hackernews'
+  Plug 'adelarsq/vim-hackernews'
 "" }}}
 
 "" Plugin: WakaTime {{{
