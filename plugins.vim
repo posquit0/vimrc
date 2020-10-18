@@ -29,6 +29,7 @@
   "" VCS
   Plug 'tpope/vim-git'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
   if has('nvim') || has('patch-8.0.902')
     Plug 'mhinz/vim-signify'

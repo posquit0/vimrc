@@ -12,6 +12,7 @@
 "" The best Git wrapper
 "" Plugin: Vim Fugitive {{{
   " Key mappings for convenience
+  nnoremap <leader>gb :Gbrowse<CR>
   nnoremap <leader>gs :Gstatus<CR>:20wincmd +<CR>
   nnoremap <leader>gw :Gwrite<CR>
   nnoremap <leader>gci :Gcommit --verbose<CR>
