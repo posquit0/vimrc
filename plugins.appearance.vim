@@ -4,8 +4,8 @@
 " http://www.posquit0.com/
 
 
+"" Use statusline more effective
 "" Plugin: Airline {{{
-  " Use statusline more effective
   if exists('$DISPLAY')
     " Automatic population of the g:airline_symbols dictionary with
     " powerline symbols
@@ -33,8 +33,9 @@
   set noshowmode
 "" }}}
 
+
+"" A fancy start screen for Vim
 "" Plugin: Vim Startify {{{
-  " A fancy start screen for Vim
   " A list of files to bookmark
   let g:startify_bookmarks=[
   \ '~/.vim/vimrc',

@@ -4,8 +4,8 @@
 " http://www.posquit0.com/
 
 
+"" A collection of language packs for Vim
 "" Plugin: Vim Polyglot {{{
-  " A collection of language packs for Vim
   " No conceal in JSON
   let g:vim_json_syntax_conceal=0
   " Enable syntax highlighting for JSDocs
@@ -15,8 +15,9 @@
   let g:vim_markdown_conceal=0
 "" }}}
 
+
+"" Asynchronous Lint Engine
 "" Plugin: ALE {{{
-  " Asynchronous Lint Engine
   " Enable ALE
   let g:ale_enable=1
   " Set the language specific linters
@@ -52,8 +53,9 @@
   let g:ale_echo_msg_format='[%severity%:%linter%] %s'
 "" }}}
 
+
+"" Async :make and linting framework for Vim/NeoVim
 "" Plugin: NeoMake {{{
-  " Async :make and linting framework for Vim/NeoVim
   " Open the location-list or quickfix list with preserving the cursor
   let g:neomake_open_list=2
   " Set the height of hte location-list or quickfix list
@@ -108,8 +110,9 @@
   let g:neomake_vim_enabled_makers=['vint']
 "" }}}
 
+
+"" Syntax checking for Vim with external syntax checker
 "" Plugin: Syntastic {{{
-  " Syntax checking for Vim with external syntax checker
   " TODO: Too slow because of synchronous job
   set statusline+=%#warningmsg#
   set statusline+=%{SyntasticStatuslineFlag()}
@@ -138,12 +141,14 @@
   let g:syntastic_sh_checkers=['shellcheck']
 "" }}}
 
+
+"" Asynchronous build and test dispatcher
 "" Plugin: Vim Dispatch {{{
-  " Asynchronous build and test dispatcher
 "" }}}
 
+
+"" Run your tests at the speed of thought
 "" Plugin: Vim Test {{{
-  " Run your tests at the speed of thought
   " Make test commands execute using other strategy
   let test#strategy='basic'
   " Exit after testing with jest
@@ -155,12 +160,14 @@
   nnoremap <silent> <leader>tv :TestVisit<CR>
 "" }}}
 
+
+"" Displays function signatures from completions in the command line
 "" Plugin: EchoDoc {{{
-  " Displays function signatures from completions in the command line
 "" }}}
 
-"" Plugin: Deoplete(NeoVIM only) {{{
-  " Dark powered asynchronous completion framework
+
+"" Dark powered asynchronous completion framework
+"" Plugin: Deoplete {{{
   " Javascript source for Deoplete
   " Add extra filetypes
   let g:tern#filetypes=['jsx', 'javascript.jsx', 'vue']
@@ -210,16 +217,19 @@
   set completeopt-=preview
 "" }}}
 
+
+"" Language server for JavaScript and TypeScript
 "" Plugin: Language Servers {{{
-  " Language server for JavaScript and TypeScript
 "" }}}
 
+
+"" Intellisense engine, full language server protocol support as VSCode
 "" Plugin: CoC(Conquer of Completion) {{{
-  " Intellisense engine, full language server protocol support as VSCode
 "" }}}
 
+
+"" Support Language Server Protocol for NeoVIM
 "" Plugin: LanguageClient(NeoVIM only) {{{
-  " Support Language Server Protocol for NeoVIM
   if has('nvim')
     " Automatically start language servers
     let g:LanguageClient_autoStart=1
@@ -242,8 +252,9 @@
   endif
 "" }}}
 
+
+"" Snippet engine for Vim
 "" Plugin: UltiSnips {{{
-  " Snippet engine for Vim
   " Explicitly set Python version to use
   if has('python3')
     let g:UltiSnipsUsePythonVersion=3
@@ -259,12 +270,14 @@
   let g:UltiSnipsEditSplit='vertical'
 "" }}}
 
+
+"" Wisely add `end` in ruby, vim, etc
 "" Plugin: Endwise {{{
-" Wisely add `end` in ruby, vim, etc
 "" }}}
 
+
+"" For intensely orgasmic commenting
 "" Plugin: NERD Commenter {{{
-  " For intensely orgasmic commenting
   " Comment the whole lines in visual mode
   let g:NERDCommentWholeLinesInVMode=1
   " Add space after the left delimiter and before the right delimiter
@@ -273,17 +286,19 @@
   let g:NERDRemoveExtraSpaces=1
 "" }}}
 
+
+"" The interactive scratchpad for hackers
 "" Plugin: Codi {{{
-  " The interactive scratchpad for hackers
   " Set shortcut to toggle Codi
   nnoremap <Leader><Leader>c :Codi!!<CR>
   xnoremap <Leader><Leader>c :Codi!!<CR>
 "" }}}
 
-" Javascript & Node
+
+"""""" Javascript & Node
+"" TODO: Key mapping
+"" Tern-based Javascript editing support
 "" Plugin: Tern for Vim {{{
-  " TODO: Key mapping
-  " Tern-based Javascript editing support
   " Set timeout
   let g:tern_request_timeout=1
   " Display argument type hints when the cursor is left over a function
@@ -294,19 +309,22 @@
   let g:tern_map_keys=0
 "" }}}
 
+
+"" Tools and environment to make Vim superb for developing with Node.js
 "" Plugin: Vim Node {{{
-  " Tools and environment to make Vim superb for developing with Node.js
 "" }}}
 
+
+"" Syntax file for JavaScript libraries
 "" Plugin: Javascript Libraries Syntax {{{
-  " Syntax file for JavaScript libraries
   " Set up used libraries
   let g:used_javascript_libs='react,jquery,underscore,handlebars'
 "" }}}
 
-" HTML & CSS
+
+"""""" HTML & CSS
+"" Provide Zen-coding for Vim
 "" Plugin: Emmet {{{
-  " Provide Zen-coding for Vim
   " Enable all functions, which is equal to
   " n: normal, i: insert: v: visual, a: all
   let g:user_emmet_mode='a'
@@ -339,9 +357,9 @@
 "" }}}
 
 
-" Markdown
+"""""" Markdown
+"" Distraction-free writing
 "" Plugin: Goyo {{{
-  " Distraction-free writing
   " Integrate with other plugins
   function! s:goyo_enter()
     silent !tmux set status off
@@ -366,8 +384,9 @@
   autocmd! User GoyoLeave nested call <SID>goyo_leave()
 "" }}}
 
+
+"" Hyperfocus-writing in Vim
 "" Plugin: Limelight {{{
-  " Hyperfocus-writing in Vim
   " Set coefficient value
   let g:limelight_default_coefficient=0.7
   " Configure the number of preceding/following paragraphs to include

@@ -5,7 +5,6 @@
 
 
 """ Install Plugins {{{
-  " Install plugins into Vim
   if has('nvim')
     call plug#begin('$VIM_HOME/plugged.nvim')
   else

@@ -4,8 +4,8 @@
 " http://www.posquit0.com/
 
 
+"" All trailing whitespace characters to be highlighted
 "" Plugin: Vim Better Whitespace {{{
-  " All trailing whitespace characters to be highlighted
   " Disable this plugin for specific file types
   let g:better_whitespace_filetypes_blacklist=[
   \ 'diff', 'gitcommit', 'unite', 'qf', 'help', 'nerdtree'
@@ -14,8 +14,9 @@
   autocmd BufWritePre * StripWhitespace
 "" }}}
 
+
+"" The fastest (Neo)Vim plugin for asynchronously displaying the colours in the file
 "" Plugin: Colorizer {{{
-  " The fastest (Neo)Vim plugin for asynchronously displaying the colours in the file
   " Method to highlight
   let g:Hexokinase_highlighters=['backgroundfull']
   " Patterns to match for all filetypes
@@ -30,19 +31,22 @@
   \ ]
 "" }}}
 
+
+"" Provides additional text objects
 "" Plugin: Targets {{{
-  " Provides additional text objects
 "" }}}
 
+
+"" EditorConfig plugin for Vim
+"" Ensure that this plugin works well with Tim Pope's fugitive
 "" Plugin: EditorConfig {{{
-  " EditorConfig plugin for Vim
-  " Ensure that this plugin works well with Tim Pope's fugitive
   " Avoid loading EditorConfig for any remote files over ssh
   let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 "" }}}
 
+
+"" Bringing Sublime Text's awesome multiple selection feature into Vim
 "" Plugin: Vim Multiple Cursors {{{
-  " Bringing Sublime Text's awesome multiple selection feature into Vim
   " Turn off the default key bindings
   let g:multi_cursor_use_default_mapping=0
   " Configure custom key bindings
@@ -56,8 +60,9 @@
   let g:multi_cursor_exit_from_insert_mode=0
 "" }}}
 
+
+"" For intensely orgasmic commenting
 "" Plugin: Auto Pairs {{{
-  " For intensely orgasmic commenting
   " Shortcut for fast wrapping the word
   let g:AutoPairsShortcutFastWrap='<C-e>'
   " Enable FlyMode
@@ -66,13 +71,15 @@
   let g:AutoPairsShortcutBackInsert='<C-b>'
 "" }}}
 
+
+"" All about surroundings: parenthless, brackets, quotes, XML tags and more
 "" Plugin: Vim Surround {{{
-  " All about surroundings: parenthless, brackets, quotes, XML tags and more
 "" }}}
 
+
+"" Displaying thin vertical lines at each indentation level for code
+"" TODO: Very slow after Goyo mode and with long line files
 "" Plugin: indentLine {{{
-  " Displaying thin vertical lines at each indentation level for code
-  " TODO: Very slow after Goyo mode and with long line files
   " Specify a character to  be used as indent line
   let g:indentLine_char='┆'
   " let g:indentLine_char='|'
@@ -95,22 +102,25 @@
   let g:indentLine_noConcealCursor=''
 "" }}}
 
+
+"" Display a guide for the current line's indent level
+"" Enable it with options(+hl, -hl, +cc, -cc)
 "" Plugin: Local Indent Guide {{{
-  " Display a guide for the current line's indent level
-  " Enable it with options(+hl, -hl, +cc, -cc)
   " autocmd FileType * LocalIndentGuide +hl +cc
 "" }}}
 
+
+"" Show the context of the currently visible buffer contents
 "" Plugin: Context {{{
-  " Show the context of the currently visible buffer contents
   " Whether to enable the context plugin
   let g:context_enabled=1
   " INFO: Issue in Neovim which leads to some artefacts
   let g:context_nvim_no_redraw=1
 " }}}
 
+
+"" Highlight the flooding part of an overly long line
 "" Plugin: Lengthmatters {{{
-  " Highlight the flooding part of an overly long line
   " Highlight when opening a new window
   let g:lengthmatters_on_by_default=1
   " Whether to highlight based on the value of textwidth
@@ -121,6 +131,7 @@
   let g:lengthmatters_exclude_readonly=1
 "" }}}
 
+
+"" Toggles between hybrid and absolute line numbers automatically
 "" Plugin: Number Toggle {{{
-  " Toggles between hybrid and absolute line numbers automatically
 "" }}}

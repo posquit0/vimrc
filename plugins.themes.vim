@@ -11,8 +11,8 @@
   let g:rehash256=1
 "" }}}
 
+
 "" Theme: Gruvbox {{{
-  " Uses 256 color palette
   " Set option value to 16 to fallback
   let g:gruvbox_termcolors=256
   " Change darkmode contrast. Possible values are `soft`, `medium`, `hard`
@@ -25,17 +25,22 @@
   let g:gruvbox_invert_indent_guides=0
 "" }}}
 
+
 "" Theme: Zenburn {{{
 "" }}}
+
 
 "" Theme: Solarized {{{
 "" }}}
 
+
 "" Theme: Seoul256 {{{
 "" }}}
 
+
 "" Theme: Base16 {{{
 "" }}}
+
 
 "" Theme: All-in-One {{{
 "" }}}

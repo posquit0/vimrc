@@ -4,8 +4,8 @@
 " http://www.posquit0.com/
 
 
+"" Browse Github events in Vim
 "" Plugin: Github Dashboard {{{
-  " Browse Github events in Vim
   "" GitHub Public
   let g:github_dashboard={}
   let g:github_dashboard['username']='posquit0'
@@ -14,6 +14,7 @@
   nnoremap <Leader>gha :GHActivity<CR>
   nnoremap <Leader>ghD :GHDashboard<space>
   nnoremap <Leader>ghA :GHActivity<space>
+
   "" GitHub Enterprise
   " let g:github_dashboard#private={}
   " let g:github_dashboard#private['username']='posquit0'
@@ -22,10 +23,12 @@
   " let g:github_dashboard#private['web_endpoint']='https://github.private.com'
 "" }}}
 
+
+"" Browse Hacker News inside Vim
 "" Plugin: Hackernews {{{
-  " Browse Hacker News inside Vim
 "" }}}
 
+
+"" Productivity metrics, goals, leaderboards, and automatic time tracking
 "" Plugin: WakaTime {{{
-  " Productivity metrics, goals, leaderboards, and automatic time tracking
 "" }}}

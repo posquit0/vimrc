@@ -4,29 +4,33 @@
 " http://www.posquit0.com/
 
 
+"" Full path fuzzy file, buffer, mru, tag finder for Vim
 "" Plugin: CtrlP {{{
-  " Full path fuzzy file, buffer, mru, tag finder for Vim
   " Change default mapping
   let g:ctrlp_map='<c-p>'
   " Change default command
   let g:ctrlp_cmd='CtrlP'
 "" }}}
 
+
+"" An efficient fuzzy finder that helps to locate files, buffers, mrus, gtags, etc
 "" Plugin: LeaderF {{{
-  " An efficient fuzzy finder that helps to locate files, buffers, mrus, gtags, etc
 "" }}}
 
+
+"" Full path fuzzy file, buffer, mru, tag finder for Vim
+"" A general-purpose command-line fuzzy finder
 "" Plugin: Fzf {{{
-  " Full path fuzzy file, buffer, mru, tag finder for Vim
-  " A general-purpose command-line fuzzy finder
 "" }}}
 
+
+"" Provides a much simpler way to use motions in Vim
 "" Plugin: Easymotion {{{
-  " Provides a much simpler way to use motions in Vim
 "" }}}
 
+
+"" To place, toggle, display and navigate marks
 "" Plugin: Vim Signature {{{
-  " To place, toggle, display and navigate marks
   " Keymap:
   " mx        Toggle mark 'x' where x is a-zA-Z
   " dmx       Remove mark 'x' where x is a-zA-Z
@@ -48,20 +52,23 @@
   let g:SignatureMarkTextHLDynamic=1
 "" }}}
 
+
+"" Eclipse like task list
 "" Plugin: TaskList {{{
-  " Eclipse like task list
   " Map TaskList to <leader>tt
   nnoremap <silent> <leader>tt :TaskList<CR>
 "" }}}
 
+
+"" Easy way to browse the tags
 "" Plugin: Tagbar {{{
-  " Easy way to browse the tags
   " Map TagbarToggle to <F10>
   nnoremap <silent> <F10> :TagbarToggle<CR>
 "" }}}
 
+
+"" Explore filesystem with Vim
 "" Plugin: NERDTree {{{
-  " Explore filesystem with Vim
   " Ignore some extensions
   let NERDTreeIgnore=['.o$','.pyc$']
   " Show hidden files
@@ -76,8 +83,9 @@
   nnoremap <silent> <F11> :NERDTreeToggle<CR>
 "" }}}
 
+
+"" A plugin of NERDTree showing git status flags
 "" Plugin: NERDTree Git Plugin {{{
-  " A plugin of NERDTree showing git status flags
   " Use this variable to change symbols
   let g:NERDTreeIndicatorMapCustom = {
   \ 'Modified'  : '*',
@@ -92,7 +100,8 @@
   \ }
 "" }}}
 
+
+"" NERDTree and tabs together in Vim
+"" INFO: Not maintained Plugin
 "" Plugin: NERDTree Tabs {{{
-  " NERDTree and tabs together in Vim
-  " INFO: Not maintained Plugin
 "" }}}

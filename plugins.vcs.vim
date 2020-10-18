@@ -4,12 +4,13 @@
 " http://www.posquit0.com/
 
 
+"" For syntax highlighting and other Git niceties
 "" Plugin: Vim Git {{{
-  " For syntax highlighting and other Git niceties
 "" }}}
 
+
+"" The best Git wrapper
 "" Plugin: Vim Fugitive {{{
-  " The best Git wrapper
   " Key mappings for convenience
   nnoremap <leader>gs :Gstatus<CR>:20wincmd +<CR>
   nnoremap <leader>gw :Gwrite<CR>
@@ -19,15 +20,17 @@
   nnoremap <leader>gfb :Gblame -w<CR>:vertical resize 26<CR>
 "" }}}
 
+
+"" A git commit browser in Vim
 "" Plugin: Git Commit Browser {{{
-  " A git commit browser in Vim
   " Key mappings for convenience
   nnoremap <leader>gl :GV --all<CR>
   nnoremap <leader>gfl :GV! --all<CR>
 "" }}}
 
+
+"" Indicate added, modified and removed lines based on data of VCS
 "" Plugin: Vim Signify {{{
-  " Indicate added, modified and removed lines based on data of VCS
   " Key mappings for hunk jumping
   nmap <leader>gn <plug>(signify-next-hunk)
   nmap <leader>gN <plug>(signify-prev-hunk)
@@ -35,8 +38,9 @@
   nnoremap <leader><leader>d :SignifyHunkDiff<CR>
 "" }}}
 
+
+"" More pleasant editing on commit messagess
 "" Plugin: Committia {{{
-  " More pleasant editing on commit messagess
   " Specify the width of the edit window
   let g:committia_edit_window_width=100
   " If the value is 'always', committia.vim always employs single column mode
@@ -45,8 +49,9 @@
   let g:committia_min_window_width=180
 "" }}}
 
+
+"" Make browsing Vim's powerful undo tree less painful
 "" Plugin: Gundo {{{
-  " Make browsing Vim's powerful undo tree less painful
   " Map GundoToggle to <F12>
   nnoremap <silent> <F12> :GundoToggle<CR>
   " Set the horizontal width of Gundo graph

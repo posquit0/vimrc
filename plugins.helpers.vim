@@ -4,19 +4,21 @@
 " http://www.posquit0.com/
 
 
+"" Provide interface for Web API
+"" Dependency for Emmet-Vim Custom Snippet
 "" Plugin: WebAPI Vim {{{
-  " Provide interface for Web API
-  " Dependency for Emmet-Vim Custom Snippet
 "" }}}
 
+
+"" Sudo will ask for your password if need be
+"" Usage: :e sudo:/etc/passwd
 "" Plugin: Sudo-Vim {{{
-  " Sudo will ask for your password if need be
-  " Usage: :e sudo:/etc/passwd
 "" }}}
 
+
+"" Small collection of settings, commands and mappings put together to make
+"" working with the location/quickfix list/window smoother
 "" Plugin: Vim QF {{{
-  " Small collection of settings, commands and mappings put together to make
-  " working with the location/quickfix list/window smoother
   " Enable Ack style mapping only in location/quickfix windows
   " s - open entry in a new horizontal window
   " v - open entry in a new vertical window
@@ -35,14 +37,16 @@
   let g:qf_auto_open_loclist=1
 "" }}}
 
+
+"" Provides a set of mappings for enhancing in-buffer search experience
+"" Automatically clears search highlight when cursor is moved
+"" Improved start-search (visual-mode, highlighting without moving)
 "" Plugin: Vim Slash {{{
-  " Provides a set of mappings for enhancing in-buffer search experience
-  " Automatically clears search highlight when cursor is moved
-  " Improved start-search (visual-mode, highlighting without moving)
 "" }}}
 
+
+"" Brings physics-based smooth scrolling to the Vim
 "" Plugin: Comfortable Motion {{{
-  " Brings physics-based smooth scrolling to the Vim
   " Prevent the plugin from defining those default key mappings
   " let g:comfortable_motion_no_default_key_mappings=1
   " Specify friction coeffecient value
@@ -51,7 +55,7 @@
   let g:comfortable_motion_air_drag=2.0
 "" }}}
 
-"" Plugin: Repeat.vim {{{
-  " Enable repeating supported plugin maps with `.`
-"" }}}
 
+"" Enable repeating supported plugin maps with `.`
+"" Plugin: Repeat.vim {{{
+"" }}}
