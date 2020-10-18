@@ -40,12 +40,12 @@
   let g:startify_bookmarks=[
   \ '~/.vim/vimrc',
   \ '~/.vim/plugins.vim',
-  \]
+  \ ]
   " A list of Vim regular expressions that filters recently used files
   let g:startify_skiplist=[
   \ 'COMMIT_EDITMSG',
   \ $VIMRUNTIME .'/doc',
   \ 'plugged/.*/doc',
   \ 'bundle/.*/doc',
-  \]
+  \ ]
 "" }}}

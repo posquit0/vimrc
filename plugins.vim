@@ -99,9 +99,11 @@
     " Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
   endif
   Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-  Plug 'tpope/vim-endwise', { 'for': [
-  \ 'ruby', 'vim', 'sh', 'zsh', 'matlab', 'snippets'
-  \ ] }
+  Plug 'tpope/vim-endwise', {
+  \ 'for': [
+  \   'ruby', 'vim', 'sh', 'zsh', 'matlab', 'snippets'
+  \ ]
+  \ }
   Plug 'scrooloose/nerdcommenter'
   Plug 'metakirby5/codi.vim'
   " Hook into omni completion to handle autocompletion and provide more
@@ -122,7 +124,7 @@
   \   'html', 'haml', 'jinja', 'hbs', 'html.handlebars', 'xml',
   \   'css', 'less', 'sass', 'javascript'
   \ ]
-  \}
+  \ }
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
   " Plug 'suan/vim-instant-markdown'

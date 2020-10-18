@@ -353,7 +353,7 @@
   \ 'html.handlebars': {
   \   'extends': 'html',
   \ },
-  \}
+  \ }
 "" }}}
 
 
