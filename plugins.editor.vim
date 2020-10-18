@@ -8,7 +8,7 @@
 "" Plugin: Vim Better Whitespace {{{
   " Disable this plugin for specific file types
   let g:better_whitespace_filetypes_blacklist=[
-  \ 'diff', 'gitcommit', 'unite', 'qf', 'help', 'nerdtree'
+  \ 'diff', 'gitcommit', 'unite', 'qf', 'help', 'nerdtree', 'startify'
   \ ]
   " Strip all trailing whitespace everytime save the file
   autocmd BufWritePre * StripWhitespace
