@@ -6,7 +6,6 @@
 
 "" Plugin: Vim Polyglot {{{
   " A collection of language packs for Vim
-  Plug 'sheerun/vim-polyglot'
   " No conceal in JSON
   let g:vim_json_syntax_conceal=0
   " Enable syntax highlighting for JSDocs
@@ -18,7 +17,6 @@
 
 "" Plugin: ALE {{{
   " Asynchronous Lint Engine
-  Plug 'w0rp/ale'
   " Enable ALE
   let g:ale_enable=1
   " Set the language specific linters
@@ -56,9 +54,6 @@
 
 "" Plugin: NeoMake {{{
   " Async :make and linting framework for Vim/NeoVim
-  " Plug 'neomake/neomake', { 'for': [
-  " \ 'c', 'cpp', 'java', 'python', 'javascript', 'scala', 'sh', 'vim'
-  " \ ] }
   " Open the location-list or quickfix list with preserving the cursor
   let g:neomake_open_list=2
   " Set the height of hte location-list or quickfix list
@@ -116,7 +111,6 @@
 "" Plugin: Syntastic {{{
   " Syntax checking for Vim with external syntax checker
   " TODO: Too slow because of synchronous job
-  " Plug 'scrooloose/syntastic'
   set statusline+=%#warningmsg#
   set statusline+=%{SyntasticStatuslineFlag()}
   set statusline+=%*
@@ -146,12 +140,10 @@
 
 "" Plugin: Vim Dispatch {{{
   " Asynchronous build and test dispatcher
-  Plug 'tpope/vim-dispatch'
 "" }}}
 
 "" Plugin: Vim Test {{{
   " Run your tests at the speed of thought
-  Plug 'janko-m/vim-test'
   " Make test commands execute using other strategy
   let test#strategy='basic'
   " Exit after testing with jest
@@ -165,20 +157,11 @@
 
 "" Plugin: EchoDoc {{{
   " Displays function signatures from completions in the command line
-  Plug 'Shougo/echodoc.vim'
 "" }}}
 
 "" Plugin: Deoplete(NeoVIM only) {{{
   " Dark powered asynchronous completion framework
-  if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-  endif
   " Javascript source for Deoplete
-  Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript'] }
   " Add extra filetypes
   let g:tern#filetypes=['jsx', 'javascript.jsx', 'vue']
   " Use tern_for_vim
@@ -194,7 +177,6 @@
   let g:deoplete#sources#ternjs#include_keywords=0
 
   " Python source for Deoplete
-  Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
   " Enable caching of completions for faster results
   let g:deoplete#sources#jedi#enable_cache=1
   " Show docstring in preview window
@@ -202,7 +184,6 @@
 
   if executable('gocode')
     " Go source for Deoplete
-    Plug 'zchee/deoplete-go', { 'do': 'make', 'for': ['go'] }
     " By default(not set), Find the gocode binary in $PATH environment
     let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
     " By default, the completion word list is in the sort order of gocode
@@ -212,18 +193,17 @@
     let g:deoplete#sources#go#use_cache=1
     let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
   endif
-  " Vim source for Neocomplete/Deoplete
-  Plug 'Shougo/neco-vim', { 'for': ['vim'] }
-  " Insert mode completion of words in adjacent tmux panes
-  Plug 'wellle/tmux-complete.vim'
   " Run deoplete automatically
   let g:deoplete#enable_at_startup=1
-  " When a capital letter is included in input, does not ignore
-  let g:deoplete#enable_smart_case=1
-  " Set the number of the input completion at the time of key input
-  let g:deoplete#auto_complete_start_length=2
+  call deoplete#enable()
+  " Delay the completion after input in milliseconds
+  call deoplete#custom#option('auto_complete_delay', 200)
   " Set the limit of candidates
-  let g:deoplete#max_list=32
+  call deoplete#custom#option('max_list', 64)
+  " Set the number of the input completion at the time of key input
+  call deoplete#custom#option('min_pattern_length', 2)
+  " When a capital letter is included in input, does not ignore
+  call deoplete#custom#option('smart_case', v:true)
   " Close the preview window after completion is done
   autocmd CompleteDone * pclose!
   " Disable the preview window
@@ -232,18 +212,15 @@
 
 "" Plugin: Language Servers {{{
   " Language server for JavaScript and TypeScript
-  " Plug 'sourcegraph/javascript-typescript-langserver', { 'do': 'npm install && npm run build' }
 "" }}}
 
 "" Plugin: CoC(Conquer of Completion) {{{
   " Intellisense engine, full language server protocol support as VSCode
-  " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': 'yarn install'}
 "" }}}
 
 "" Plugin: LanguageClient(NeoVIM only) {{{
   " Support Language Server Protocol for NeoVIM
   if has('nvim')
-    " Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
     " Automatically start language servers
     let g:LanguageClient_autoStart=1
     " Define commands to execute to start language servers
@@ -267,7 +244,6 @@
 
 "" Plugin: UltiSnips {{{
   " Snippet engine for Vim
-  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
   " Explicitly set Python version to use
   if has('python3')
     let g:UltiSnipsUsePythonVersion=3
@@ -285,14 +261,10 @@
 
 "" Plugin: Endwise {{{
 " Wisely add `end` in ruby, vim, etc
-  Plug 'tpope/vim-endwise', { 'for': [
-  \ 'ruby', 'vim', 'sh', 'zsh', 'matlab', 'snippets'
-  \ ] }
 "" }}}
 
 "" Plugin: NERD Commenter {{{
   " For intensely orgasmic commenting
-  Plug 'scrooloose/nerdcommenter'
   " Comment the whole lines in visual mode
   let g:NERDCommentWholeLinesInVMode=1
   " Add space after the left delimiter and before the right delimiter
@@ -303,7 +275,6 @@
 
 "" Plugin: Codi {{{
   " The interactive scratchpad for hackers
-  Plug 'metakirby5/codi.vim'
   " Set shortcut to toggle Codi
   nnoremap <Leader><Leader>c :Codi!!<CR>
   xnoremap <Leader><Leader>c :Codi!!<CR>
@@ -313,17 +284,6 @@
 "" Plugin: Tern for Vim {{{
   " TODO: Key mapping
   " Tern-based Javascript editing support
-  " Hook into omni completion to handle autocompletion and provide more
-  function! BuildTern(info)
-    " info is a dictionary with 3 fields
-    " - name:   name of the plugin
-    " - status: 'installed', 'updated', or 'unchanged'
-    " - force:  set on PlugInstall! or PlugUpdate!
-    if a:info.status == 'installed' || a:info.force
-      !npm install
-    endif
-  endfunction
-  Plug 'marijnh/tern_for_vim', { 'for': ['javascript'], 'do': function('BuildTern') }
   " Set timeout
   let g:tern_request_timeout=1
   " Display argument type hints when the cursor is left over a function
@@ -336,12 +296,10 @@
 
 "" Plugin: Vim Node {{{
   " Tools and environment to make Vim superb for developing with Node.js
-  Plug 'moll/vim-node'
 "" }}}
 
 "" Plugin: Javascript Libraries Syntax {{{
   " Syntax file for JavaScript libraries
-  Plug 'othree/javascript-libraries-syntax.vim'
   " Set up used libraries
   let g:used_javascript_libs='react,jquery,underscore,handlebars'
 "" }}}
@@ -349,12 +307,6 @@
 " HTML & CSS
 "" Plugin: Emmet {{{
   " Provide Zen-coding for Vim
-  Plug 'mattn/emmet-vim', {
-  \ 'for': [
-  \   'html', 'haml', 'jinja', 'hbs', 'html.handlebars', 'xml',
-  \   'css', 'less', 'sass', 'javascript'
-  \ ]
-  \}
   " Enable all functions, which is equal to
   " n: normal, i: insert: v: visual, a: all
   let g:user_emmet_mode='a'
@@ -390,7 +342,6 @@
 " Markdown
 "" Plugin: Goyo {{{
   " Distraction-free writing
-  Plug 'junegunn/goyo.vim'
   " Integrate with other plugins
   function! s:goyo_enter()
     silent !tmux set status off
@@ -417,7 +368,6 @@
 
 "" Plugin: Limelight {{{
   " Hyperfocus-writing in Vim
-  Plug 'junegunn/limelight.vim'
   " Set coefficient value
   let g:limelight_default_coefficient=0.7
   " Configure the number of preceding/following paragraphs to include
@@ -429,7 +379,6 @@
 
 "" Plugin: Vim Instant Markdown {{{
   " Instant markdown Previews from Vim
-  " Plug 'suan/vim-instant-markdown'
   " Only refresh on specific events
   let g:instant_markdown_slow=1
   " Manually control to launch the preview window

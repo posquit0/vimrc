@@ -6,7 +6,6 @@
 
 "" Plugin: Vim Better Whitespace {{{
   " All trailing whitespace characters to be highlighted
-  Plug 'ntpeters/vim-better-whitespace'
   " Disable this plugin for specific file types
   let g:better_whitespace_filetypes_blacklist=[
   \ 'diff', 'gitcommit', 'unite', 'qf', 'help', 'nerdtree'
@@ -17,7 +16,6 @@
 
 "" Plugin: Colorizer {{{
   " The fastest (Neo)Vim plugin for asynchronously displaying the colours in the file
-  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
   " Method to highlight
   let g:Hexokinase_highlighters=['backgroundfull']
   " Patterns to match for all filetypes
@@ -34,12 +32,10 @@
 
 "" Plugin: Targets {{{
   " Provides additional text objects
-  Plug 'wellle/targets.vim'
 "" }}}
 
 "" Plugin: EditorConfig {{{
   " EditorConfig plugin for Vim
-  Plug 'editorconfig/editorconfig-vim'
   " Ensure that this plugin works well with Tim Pope's fugitive
   " Avoid loading EditorConfig for any remote files over ssh
   let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -47,7 +43,6 @@
 
 "" Plugin: Vim Multiple Cursors {{{
   " Bringing Sublime Text's awesome multiple selection feature into Vim
-  Plug 'terryma/vim-multiple-cursors'
   " Turn off the default key bindings
   let g:multi_cursor_use_default_mapping=0
   " Configure custom key bindings
@@ -63,7 +58,6 @@
 
 "" Plugin: Auto Pairs {{{
   " For intensely orgasmic commenting
-  Plug 'jiangmiao/auto-pairs'
   " Shortcut for fast wrapping the word
   let g:AutoPairsShortcutFastWrap='<C-e>'
   " Enable FlyMode
@@ -74,13 +68,11 @@
 
 "" Plugin: Vim Surround {{{
   " All about surroundings: parenthless, brackets, quotes, XML tags and more
-  Plug 'tpope/vim-surround'
 "" }}}
 
 "" Plugin: indentLine {{{
   " Displaying thin vertical lines at each indentation level for code
   " TODO: Very slow after Goyo mode and with long line files
-  Plug 'Yggdroot/indentLine'
   " Specify a character to  be used as indent line
   let g:indentLine_char='┆'
   " let g:indentLine_char='|'
@@ -105,14 +97,12 @@
 
 "" Plugin: Local Indent Guide {{{
   " Display a guide for the current line's indent level
-  " Plug 'tweekmonster/local-indent.vim'
   " Enable it with options(+hl, -hl, +cc, -cc)
   " autocmd FileType * LocalIndentGuide +hl +cc
 "" }}}
 
 "" Plugin: Context {{{
   " Show the context of the currently visible buffer contents
-  Plug 'wellle/context.vim'
   " Whether to enable the context plugin
   let g:context_enabled=1
   " INFO: Issue in Neovim which leads to some artefacts
@@ -121,7 +111,6 @@
 
 "" Plugin: Lengthmatters {{{
   " Highlight the flooding part of an overly long line
-  " Plug 'whatyouhide/vim-lengthmatters'
   " Highlight when opening a new window
   let g:lengthmatters_on_by_default=1
   " Whether to highlight based on the value of textwidth
@@ -134,5 +123,4 @@
 
 "" Plugin: Number Toggle {{{
   " Toggles between hybrid and absolute line numbers automatically
-  Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "" }}}

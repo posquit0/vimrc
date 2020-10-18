@@ -6,12 +6,10 @@
 
 "" Plugin: Vim Git {{{
   " For syntax highlighting and other Git niceties
-  Plug 'tpope/vim-git'
 "" }}}
 
 "" Plugin: Vim Fugitive {{{
   " The best Git wrapper
-  Plug 'tpope/vim-fugitive'
   " Key mappings for convenience
   nnoremap <leader>gs :Gstatus<CR>:20wincmd +<CR>
   nnoremap <leader>gw :Gwrite<CR>
@@ -23,7 +21,6 @@
 
 "" Plugin: Git Commit Browser {{{
   " A git commit browser in Vim
-  Plug 'junegunn/gv.vim'
   " Key mappings for convenience
   nnoremap <leader>gl :GV --all<CR>
   nnoremap <leader>gfl :GV! --all<CR>
@@ -31,11 +28,6 @@
 
 "" Plugin: Vim Signify {{{
   " Indicate added, modified and removed lines based on data of VCS
-  if has('nvim') || has('patch-8.0.902')
-    Plug 'mhinz/vim-signify'
-  else
-    Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
-  endif
   " Key mappings for hunk jumping
   nmap <leader>gn <plug>(signify-next-hunk)
   nmap <leader>gN <plug>(signify-prev-hunk)
@@ -45,7 +37,6 @@
 
 "" Plugin: Committia {{{
   " More pleasant editing on commit messagess
-  Plug 'rhysd/committia.vim'
   " Specify the width of the edit window
   let g:committia_edit_window_width=100
   " If the value is 'always', committia.vim always employs single column mode
@@ -56,7 +47,6 @@
 
 "" Plugin: Gundo {{{
   " Make browsing Vim's powerful undo tree less painful
-  Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
   " Map GundoToggle to <F12>
   nnoremap <silent> <F12> :GundoToggle<CR>
   " Set the horizontal width of Gundo graph

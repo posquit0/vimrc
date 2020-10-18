@@ -5,6 +5,7 @@
 
 # Vim Plugins
 plugged
+plugged.nvim
 
 .netrwhist
 

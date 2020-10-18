@@ -6,22 +6,23 @@
 
 "" Plugin: CtrlP {{{
   " Full path fuzzy file, buffer, mru, tag finder for Vim
-  Plug 'ctrlpvim/ctrlp.vim'
   " Change default mapping
   let g:ctrlp_map='<c-p>'
   " Change default command
   let g:ctrlp_cmd='CtrlP'
 "" }}}
 
+"" Plugin: LeaderF {{{
+  " An efficient fuzzy finder that helps to locate files, buffers, mrus, gtags, etc
+"" }}}
+
 "" Plugin: Fzf {{{
   " Full path fuzzy file, buffer, mru, tag finder for Vim
   " A general-purpose command-line fuzzy finder
-  Plug 'junegunn/fzf', { 'do': 'yes \| ./install --all --no-update-rc' }
 "" }}}
 
 "" Plugin: Easymotion {{{
   " Provides a much simpler way to use motions in Vim
-  Plug 'Lokaltog/vim-easymotion'
 "" }}}
 
 "" Plugin: Vim Signature {{{
@@ -42,7 +43,6 @@
   " [`        Jump to prev mark
   " ]'        Jump to start of next line containg a mark
   " ['        Jump to start of prev line containg a mark
-  Plug 'kshenoy/vim-signature'
   " Highlight signs of marks dynamically based upon state
   " indicated by vim-signify
   let g:SignatureMarkTextHLDynamic=1
@@ -50,21 +50,18 @@
 
 "" Plugin: TaskList {{{
   " Eclipse like task list
-  Plug 'vim-scripts/TaskList.vim'
   " Map TaskList to <leader>tt
   nnoremap <silent> <leader>tt :TaskList<CR>
 "" }}}
 
 "" Plugin: Tagbar {{{
   " Easy way to browse the tags
-  Plug 'majutsushi/tagbar'
   " Map TagbarToggle to <F10>
   nnoremap <silent> <F10> :TagbarToggle<CR>
 "" }}}
 
 "" Plugin: NERDTree {{{
   " Explore filesystem with Vim
-  Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
   " Ignore some extensions
   let NERDTreeIgnore=['.o$','.pyc$']
   " Show hidden files
@@ -81,7 +78,6 @@
 
 "" Plugin: NERDTree Git Plugin {{{
   " A plugin of NERDTree showing git status flags
-  Plug 'Xuyuanp/nerdtree-git-plugin'
   " Use this variable to change symbols
   let g:NERDTreeIndicatorMapCustom = {
   \ 'Modified'  : '*',
@@ -99,5 +95,4 @@
 "" Plugin: NERDTree Tabs {{{
   " NERDTree and tabs together in Vim
   " INFO: Not maintained Plugin
-  " Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
 "" }}}

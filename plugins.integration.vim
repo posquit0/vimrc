@@ -6,7 +6,6 @@
 
 "" Plugin: Github Dashboard {{{
   " Browse Github events in Vim
-  Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
   "" GitHub Public
   let g:github_dashboard={}
   let g:github_dashboard['username']='posquit0'
@@ -25,10 +24,8 @@
 
 "" Plugin: Hackernews {{{
   " Browse Hacker News inside Vim
-  Plug 'adelarsq/vim-hackernews'
 "" }}}
 
 "" Plugin: WakaTime {{{
   " Productivity metrics, goals, leaderboards, and automatic time tracking
-  Plug 'wakatime/vim-wakatime'
 "" }}}

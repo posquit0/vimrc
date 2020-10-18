@@ -6,8 +6,6 @@
 
 "" Plugin: Airline {{{
   " Use statusline more effective
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
   if exists('$DISPLAY')
     " Automatic population of the g:airline_symbols dictionary with
     " powerline symbols
@@ -37,7 +35,6 @@
 
 "" Plugin: Vim Startify {{{
   " A fancy start screen for Vim
-  Plug 'mhinz/vim-startify'
   " A list of files to bookmark
   let g:startify_bookmarks=[
   \ '~/.vim/vimrc',
