@@ -32,6 +32,27 @@
 "" }}}
 
 
+"" Maintain a yank history to cycle between when pasting
+"" Plugin: Yoink {{{
+  " History size
+  let g:yoinkMaxItems=5
+  " When set to 1, delete operations such as x or d or s will also be added to the yank history
+  let g:yoinkIncludeDeleteOperations=0
+  " When we reach the beginning or end of the yank history, the swap will stop there
+  let g:yoinkSwapClampAtEnds=0
+
+  " Key mappings for yank
+  "nmap <c-n> <plug>(YoinkPostPasteSwapBack)
+  "nmap <c-p> <plug>(YoinkPostPasteSwapForward)
+  "nmap p <plug>(YoinkPaste_p)
+  "nmap P <plug>(YoinkPaste_P)
+  nmap <expr> p yoink#canSwap() ? '<plug>(YoinkPostPasteSwapBack)' : '<plug>(YoinkPaste_p)'
+  nmap <expr> P yoink#canSwap() ? '<plug>(YoinkPostPasteSwapForward)' : '<plug>(YoinkPaste_P)'
+  nmap [y <plug>(YoinkRotateBack)
+  nmap ]y <plug>(YoinkRotateForward)
+"" }}}
+
+
 "" Provides additional text objects
 "" Plugin: Targets {{{
 "" }}}

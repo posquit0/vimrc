@@ -56,6 +56,7 @@
   "" Editor
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  Plug 'svermeulen/vim-yoink'
   Plug 'wellle/targets.vim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'terryma/vim-multiple-cursors'
