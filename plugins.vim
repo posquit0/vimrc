@@ -16,7 +16,6 @@
   Plug 'vim-scripts/sudo.vim'
   Plug 'romainl/vim-qf'
   Plug 'junegunn/vim-slash'
-  " Plug 'yuttie/comfortable-motion.vim'
   Plug 'tpope/vim-repeat'
 
 
@@ -67,6 +66,7 @@
   Plug 'wellle/context.vim'
   " Plug 'whatyouhide/vim-lengthmatters'
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
+  " Plug 'psliwka/vim-smoothie'
 
 
   "" Programming

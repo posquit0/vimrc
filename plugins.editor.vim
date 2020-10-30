@@ -156,3 +156,9 @@
 "" Toggles between hybrid and absolute line numbers automatically
 "" Plugin: Number Toggle {{{
 "" }}}
+
+
+"" Smooth scrolling for Vim done right
+"" Usage: <C-u>, <C-d>, <C-f>, <C-b>
+"" Plugin: Smoothie {{{
+"" }}}
