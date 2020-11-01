@@ -43,6 +43,7 @@
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
   Plug 'junegunn/fzf', { 'do': 'yes \| ./install --all --no-update-rc' }
+  Plug 'chaoren/vim-wordmotion'
   Plug 'Lokaltog/vim-easymotion'
   Plug 'kshenoy/vim-signature'
   Plug 'vim-scripts/TaskList.vim'

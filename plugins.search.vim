@@ -28,6 +28,13 @@
 "" Plugin: Easymotion {{{
 "" }}}
 
+"" More useful word motions for Vim
+"" Plugin: Wordmotion {{{
+  " Use to designate extra space characters
+  let g:wordmotion_spaces=['_', '-', '.']
+  let g:wordmotion_uppercase_spaces=['_', '-', '.']
+"" }}}
+
 
 "" To place, toggle, display and navigate marks
 "" Plugin: Vim Signature {{{
