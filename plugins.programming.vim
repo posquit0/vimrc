@@ -282,8 +282,12 @@
   let g:NERDCommentWholeLinesInVMode=1
   " Add space after the left delimiter and before the right delimiter
   let g:NERDSpaceDelims=1
-  " Remove spaces around comment delimiters
-  let g:NERDRemoveExtraSpaces=1
+  " Use compact syntax for prettified multi-line comments
+  let g:NERDCompactSexyComs=1
+  " Allow commenting and inverting empty lines (useful when commenting a region)
+  let g:NERDCommentEmptyLines=1
+  " Enable trimming of trailing whitespace when uncommenting
+  let g:NERDTrimTrailingWhitespace=1
 "" }}}
 
 
