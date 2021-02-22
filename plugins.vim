@@ -107,7 +107,7 @@
   \   'ruby', 'vim', 'sh', 'zsh', 'matlab', 'snippets'
   \ ]
   \ }
-  Plug 'scrooloose/nerdcommenter'
+  Plug 'preservim/nerdcommenter'
   Plug 'metakirby5/codi.vim'
   " Hook into omni completion to handle autocompletion and provide more
   function! BuildTern(info)
@@ -160,7 +160,7 @@
   \ 'plugins.vcs.vim',
   \ 'plugins.search.vim',
   \ 'plugins.editor.vim',
-  \ 'plugins.programming.vim.',
+  \ 'plugins.programming.vim',
   \ 'plugins.integration.vim',
   \ 'plugins.themes.vim',
   \ ]
