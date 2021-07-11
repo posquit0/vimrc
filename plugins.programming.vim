@@ -153,11 +153,11 @@
   let test#strategy='basic'
   " Exit after testing with jest
   let test#javascript#jest#options='--passWithNoTests'
-  nnoremap <silent> <leader>tf :TestFile<CR>
-  nnoremap <silent> <leader>tn :TestNearest<CR>
-  nnoremap <silent> <leader>ts :TestSuit<CR>
-  nnoremap <silent> <leader>tl :TestLast<CR>
-  nnoremap <silent> <leader>tv :TestVisit<CR>
+  nnoremap <silent> <leader>Tf :TestFile<CR>
+  nnoremap <silent> <leader>Tn :TestNearest<CR>
+  nnoremap <silent> <leader>Ts :TestSuit<CR>
+  nnoremap <silent> <leader>Tl :TestLast<CR>
+  nnoremap <silent> <leader>Tv :TestVisit<CR>
 "" }}}
 
 

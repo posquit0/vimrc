@@ -25,6 +25,10 @@
   Plug 'mhinz/vim-startify'
 
 
+  "" Terminal
+  Plug 'voldikss/vim-floaterm'
+
+
   "" VCS
   Plug 'tpope/vim-git'
   Plug 'tpope/vim-fugitive'
@@ -157,6 +161,7 @@
   let plugin_configurations=[
   \ 'plugins.helpers.vim',
   \ 'plugins.appearance.vim',
+  \ 'plugins.terminal.vim',
   \ 'plugins.vcs.vim',
   \ 'plugins.search.vim',
   \ 'plugins.editor.vim',
