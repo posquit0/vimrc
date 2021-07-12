@@ -76,7 +76,7 @@
 
   "" Programming
   Plug 'sheerun/vim-polyglot'
-  Plug 'w0rp/ale'
+  Plug 'dense-analysis/ale'
   " Plug 'neomake/neomake', { 'for': [
   " \ 'c', 'cpp', 'java', 'python', 'javascript', 'scala', 'sh', 'vim'
   " \ ] }
