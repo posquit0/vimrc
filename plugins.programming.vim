@@ -26,6 +26,7 @@
   \ 'python': ['flake8'],
   \ 'lua': ['luac', 'luacheck'],
   \ 'terraform': ['tflint'],
+  \ 'yaml': ['yamllint'],
   \ }
   " Set aliases from one filetype to another
   let g:ale_linter_aliases={
