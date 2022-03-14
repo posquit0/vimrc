@@ -51,10 +51,10 @@ nnoremap <C-j><C-j> :<C-u>execute 'move +'. v:count1<CR>
 
 
 """ Windows {{{
-  nnoremap <C-h> <C-w>h
-  nnoremap <C-j> <C-w>j
-  nnoremap <C-k> <C-w>k
-  nnoremap <C-l> <C-w>l
+  " nnoremap <C-h> <C-w>h
+  " nnoremap <C-j> <C-w>j
+  " nnoremap <C-k> <C-w>k
+  " nnoremap <C-l> <C-w>l
 " }}}
 
 
