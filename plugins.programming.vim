@@ -52,6 +52,9 @@
   let g:ale_echo_msg_error_str='E'
   let g:ale_echo_msg_warning_str='W'
   let g:ale_echo_msg_format='[%severity%:%linter%] %s'
+
+  nnoremap <silent> <C-l>p :ALEPreviousWrap<CR>
+  nnoremap <silent> <C-l>n :ALENextWrap<CR>
 "" }}}
 
 
