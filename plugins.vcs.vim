@@ -18,7 +18,7 @@
   nnoremap <leader>gci :Gcommit --verbose<CR>
   nnoremap <leader>gfd :Gvdiff<CR>
   nnoremap <leader>gfD :Gvdiff HEAD<CR>
-  nnoremap <leader>gfb :Gblame -w<CR>:vertical resize 26<CR>
+  nnoremap <leader>gfb :Git blame -w<CR>:vertical resize 26<CR>
 "" }}}
 
 
