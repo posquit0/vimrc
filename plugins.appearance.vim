@@ -57,6 +57,16 @@
   \ ''
   \ ]
   let g:startify_custom_header=startify#pad(g:ascii + startify#fortune#boxed())
+  " Add custom quotes
+  let g:startify_custom_header_quotes=startify#fortune#predefined_quotes()
+  \ + [[
+  \ 'Be the change that you want to see in the world!',
+  \ ]]
+  let g:startify_custom_footer=startify#pad([
+  \ '-------------------------------------------------',
+  \ '| Be the change that you want to see in the world!',
+  \ '-------------------------------------------------',
+  \ ])
   " When opening a file or bookmark, change to its directory
   let g:startify_change_to_dir=1
   " When opening a file or bookmark, seek and change to the root directory of the VCS
