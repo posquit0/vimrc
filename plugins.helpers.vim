@@ -1,7 +1,7 @@
 " plugins.helpers.vim
 "
 " Maintained by Claud D. Park <posquit0.bj@gmail.com>
-" http://www.posquit0.com/
+" https://www.posquit0.com/
 
 
 "" Provide interface for Web API

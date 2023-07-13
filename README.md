@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/posquit0/vimrc/master/icon.png?v=3&s=200" align="left" width="128px" height="128px"/>
+<img src="https://raw.githubusercontent.com/posquit0/vimrc/main/icon.png?v=3&s=200" align="left" width="128px" height="128px"/>
 
 ### **vimrc by posquit0**
 > *VIM Configuration for nerds written by posquit0*
@@ -48,6 +48,6 @@ Like this project? Follow the repository on [GitHub](https://github.com/posquit0
 
 ## License
 
-Provided under the terms of the [MIT License](https://github.com/posquit0/vimrc/blob/master/LICENSE).
+Provided under the terms of the [MIT License](https://github.com/posquit0/vimrc/blob/main/LICENSE).
 
 Copyright © 2014-2023, [Byungjin Park](https://www.posquit0.com).

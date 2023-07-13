@@ -1,7 +1,7 @@
 " plugins.vcs.vim
 "
 " Maintained by Claud D. Park <posquit0.bj@gmail.com>
-" http://www.posquit0.com/
+" https://www.posquit0.com/
 
 
 "" For syntax highlighting and other Git niceties

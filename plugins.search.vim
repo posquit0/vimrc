@@ -1,7 +1,7 @@
 " plugins.search.vim
 "
 " Maintained by Claud D. Park <posquit0.bj@gmail.com>
-" http://www.posquit0.com/
+" https://www.posquit0.com/
 
 
 "" Full path fuzzy file, buffer, mru, tag finder for Vim

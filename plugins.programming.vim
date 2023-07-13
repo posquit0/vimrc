@@ -1,7 +1,7 @@
 " plugins.programming.vim
 "
 " Maintained by Claud D. Park <posquit0.bj@gmail.com>
-" http://www.posquit0.com/
+" https://www.posquit0.com/
 
 
 "" A collection of language packs for Vim

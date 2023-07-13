@@ -1,7 +1,7 @@
 " plugins.editor.vim
 "
 " Maintained by Claud D. Park <posquit0.bj@gmail.com>
-" http://www.posquit0.com/
+" https://www.posquit0.com/
 
 
 "" All trailing whitespace characters to be highlighted
