@@ -50,4 +50,4 @@ Like this project? Follow the repository on [GitHub](https://github.com/posquit0
 
 Provided under the terms of the [MIT License](https://github.com/posquit0/vimrc/blob/main/LICENSE).
 
-Copyright © 2014-2023, [Byungjin Park](https://www.posquit0.com).
+Copyright © 2014-2026, [Byungjin Park](https://www.posquit0.com).
